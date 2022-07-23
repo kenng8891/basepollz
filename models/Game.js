@@ -44,24 +44,57 @@ Game.init(
       primaryKey: true,
       autoIncrement: true
     },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    game_url: {
+    // title: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // },
+    team_home:{
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isURL: true
+      references: {
+        model: "team",
+        id: "team_id"
       }
     },
-    user_id: {
-      type: DataTypes.INTEGER,
+    team_away:{
+      type: DataTypes.STRING,
+      allowNull: false,
       references: {
-        model: 'user',
-        key: 'id'
+        model: "team",
+        id: "team_id"
       }
+    },
+    game_id: { //formerly 'game_url'
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    // user_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id'
+    //   }
+    // }
+    game_status:{
+      type: DataTypes.STRING,
+      allowNull: false
+      //SHOULD THIS BE A LIMITED SERIES OF CHOICES? 'PREVIEW', 'LIVE', AND 'FINAL'?
+    },
+    score_home:{
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    score_away:{
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    home_isWinner: {
+      type: DataTypes.BOOLEAN,
+    },
+    away_isWinner: {
+      type: DataTypes.BOOLEAN,
     }
+
   },
   {
     sequelize,

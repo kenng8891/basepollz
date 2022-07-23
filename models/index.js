@@ -1,5 +1,6 @@
 // import all models
 const Game = require('./Game');
+const Team = require('./Team');
 const User = require('./User');
 const Vote = require('./Vote');
 const Comment = require('./Comment');
@@ -65,4 +66,9 @@ Game.hasMany(Comment, {
   foreignKey: 'game_id'
 });
 
-module.exports = { User, Game, Vote, Comment };
+//NEW: make sure this is correct
+Game.hasMany(Team, {
+  foreignKey: 'team_id'
+});
+
+module.exports = { User, Game, Vote, Comment, Team };
