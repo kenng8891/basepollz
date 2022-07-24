@@ -1,6 +1,6 @@
-const { Post } = require("../models");
+const { Game } = require("../models");
 
-const postdata = [
+const gamedata = [
   {
     title: "Game 1",
     post_url: "https://www.espn.com/mlb/boxscore/_/gameId/401355557",
