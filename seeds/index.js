@@ -1,5 +1,5 @@
 const seedUsers = require('./user-seeds');
-const seedPosts = require('./post-seeds');
+const seedPosts = require('./game-seeds');
 const seedComments = require('./comment-seeds');
 const seedVotes = require('./vote-seeds');
 
@@ -23,4 +23,5 @@ const seedAll = async () => {
   process.exit(0);
 };
 
+//if database is empty, seed all, else run fetch data, and seed that?
 seedAll();

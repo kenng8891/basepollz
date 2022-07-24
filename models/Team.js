@@ -8,21 +8,25 @@ class Team extends Model {
 //THIS WILL HAVE TO BE SEEDED
 Team.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      // the below are unnecessary because we're seeding the teams ourselves
-    //   primaryKey: true,
-    //   autoIncrement: true
-    },
+    // id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   unique: true,
+    //   // the below might be unnecessary because we're seeding the teams ourselves
+    //    primaryKey: true,
+    //    autoIncrement: true
+    // },
     team_id: { 
       type: DataTypes.INTEGER,
       allowNull: false,
+      unique: true,
+      primarykey: true
     },
    
-    teamName:{
+    team_name:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     //fka "path"
     logoPath: {

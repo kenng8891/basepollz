@@ -88,7 +88,7 @@ const teamData = [
   {
     id: 15,
     teamID: 119,
-    teamName: "Los Angelos Dodgers",
+    teamName: "Los Angeles Dodgers",
     logoPath: "../public/logo-files/LosAngeles_Dodgers.png",
   },
   {
