@@ -4,6 +4,17 @@ const fetch = require('node-fetch');
 var now = moment();
 var priorDate = now.subtract(1, 'days').format('YYYY-MM-DD');
 var tmwDate = now.add(2, 'days').format('YYYY-MM-DD');
+const reloadTime = 6;
+
+
+//SET THE INTERVAL TO CHECK HOURLY (IF CURRENT HOUR = 6AM, ELSE DO NOTHING   )
+setInterval(retrieveData, 3600000);
+
+function retrieveData() {
+  if (now.hours() === reloadTime) {
+    getApi();
+  }
+}
 
 function getApi() {
     var mlbApi = 'http://statsapi.mlb.com/api/v1/schedule/games/?sportId=1&startDate='+priorDate+'&endDate='+tmwDate;
@@ -22,11 +33,9 @@ function getApi() {
             //   totalGames = totalGamesArr[i]+totalGames;       
             //   datesObj = (({dates, totalItems}) => ({dates, totalItems}))(data)    
             // }
-            console.log(data);
             datesObj = data.dates.map(({date, games}) => {
               return {date, totalGames, games}
             })
-            console.log('-----------------------------------------------')
             //datesObj[0] = yesterday, [1] = today, [2] = tmw
 
             //creating an array of objects for each day of games
@@ -35,8 +44,11 @@ function getApi() {
               yestGames.push({
                 date: datesObj[0].date,
                 homeTeam: datesObj[0].games[i].teams.home.team.name,
+                homeTeamId: datesObj[0].games[i].teams.home.team.id,
                 awayTeam: datesObj[0].games[i].teams.away.team.name,
-                winningTeam: datesObj[0].games[i].teams.home.isWinner,
+                awayTeamId: datesObj[0].games[i].teams.away.team.id,
+                homeWin: datesObj[0].games[i].teams.home.isWinner,
+                awayWin: datesObj[0].games[i].teams.away.isWinner,
                 homeScore: datesObj[0].games[i].teams.home.score,
                 awayScore: datesObj[0].games[i].teams.away.score,
                 gameStatus: datesObj[0].games[i].status.abstractGameState
@@ -48,7 +60,9 @@ function getApi() {
               todayGames.push({
                 date: datesObj[1].date,
                 homeTeam: datesObj[1].games[i].teams.home.team.name,
+                homeTeamId: datesObj[1].games[i].teams.home.team.id,
                 awayTeam: datesObj[1].games[i].teams.away.team.name,
+                awayTeamId: datesObj[1].games[i].teams.away.team.id,
                 homeScore: datesObj[1].games[i].teams.home.score,
                 awayScore: datesObj[1].games[i].teams.away.score,
                 gameStatus: datesObj[1].games[i].status.abstractGameState
@@ -60,7 +74,9 @@ function getApi() {
               tmwGames.push({
                 date: datesObj[2].date,
                 homeTeam: datesObj[2].games[i].teams.home.team.name,
+                homeTeamId: datesObj[2].games[i].teams.home.team.id,
                 awayTeam: datesObj[2].games[i].teams.away.team.name,
+                awayTeamId: datesObj[2].games[i].teams.away.team.id,
                 gameStatus: datesObj[2].games[i].status.abstractGameState
               })
             }
@@ -72,4 +88,3 @@ function getApi() {
 
         })
     }
-getApi();
