@@ -64,8 +64,8 @@ function getApi() {
           team_name_away: datesObj[1].games[i].teams.away.team.name,
           team_id_home: datesObj[1].games[i].teams.home.team.id,
           team_id_away: datesObj[1].games[i].teams.away.team.id,
-          team_score_home: datesObj[1].games[i].teams.home.score,
-          team_score_away: datesObj[1].games[i].teams.away.score,
+          // team_score_home: datesObj[1].games[i].teams.home.score,
+          // team_score_away: datesObj[1].games[i].teams.away.score,
           game_status: datesObj[1].games[i].status.abstractGameState
         })
       }
