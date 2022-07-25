@@ -48,6 +48,6 @@ const gamedata = [
   },
 ];
 
-const seedPosts = () => Post.bulkCreate(postdata);
+const seedGames = () => Game.bulkCreate(gamedata);
 
-module.exports = seedPosts;
+module.exports = seedGames;
