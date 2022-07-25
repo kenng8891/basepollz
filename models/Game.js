@@ -49,7 +49,7 @@ Game.init(
     //   allowNull: false
     // },
     team_home:{
-      type: DataTypes.STRING,
+      type: 'foreign key',
       allowNull: false,
       references: {
         model: "team",
@@ -57,7 +57,7 @@ Game.init(
       }
     },
     team_away:{
-      type: DataTypes.STRING,
+      type: 'foreign key',
       allowNull: false,
       references: {
         model: "team",

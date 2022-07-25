@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // create our TEAM model
-class Team extends Model {
-  
-}
+class Team extends Model {}
 
 //THIS WILL HAVE TO BE SEEDED
 Team.init(
@@ -12,8 +10,8 @@ Team.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       // the below are unnecessary because we're seeding the teams ourselves
-    //   primaryKey: true,
-    //   autoIncrement: true
+      primaryKey: true,
+      autoIncrement: true
     },
     team_id: { 
       type: DataTypes.INTEGER,
@@ -39,4 +37,4 @@ Team.init(
   }
 );
 
-module.exports = Team;
+exports.Team = Team;
