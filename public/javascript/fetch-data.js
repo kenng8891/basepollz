@@ -6,7 +6,6 @@ var priorDate = now.subtract(1, 'days').format('YYYY-MM-DD');
 var tmwDate = now.add(2, 'days').format('YYYY-MM-DD');
 const reloadTime = 6;
 
-
 //SET THE INTERVAL TO CHECK HOURLY (IF CURRENT HOUR = 6AM, ELSE DO NOTHING   )
 setInterval(retrieveData, 3600000);
 
@@ -24,7 +23,7 @@ function getApi() {
       })
       .then(function(data) {
         // const totalGamesArr = [];
-        let totalGames = 0
+        // let totalGames = 0
         let datesObj = {}
             //data.dates[0] = yesterday, [1] = today, [2] = tmw
             //if we want total number of games across all 3 days we can use the below.
