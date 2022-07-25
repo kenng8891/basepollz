@@ -1,7 +1,12 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Post, User, Comment, Vote } = require("../models");
+const { Game, User, Comment, Team, Vote } = require("../models");
 const withAuth = require("../utils/auth");
+
+//CHANGES TO MAKE: THIS SHOULD BE THE USER PROFILE PAGE.
+//GET ALL GAMES THEY VOTED ON
+//List games the user voted on, with game info, and whether they received a point or not
+//THEN list leaderboard below? If Time?
 
 // get all posts for dashboard
 router.get("/", withAuth, (req, res) => {
@@ -13,12 +18,12 @@ router.get("/", withAuth, (req, res) => {
     },
     attributes: [
       "id",
-      "post_url",
+      "game_url",
       "title",
       "created_at",
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
         ),
         "vote_count",
       ],
