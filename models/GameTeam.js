@@ -23,14 +23,22 @@ GameTeam.init(
         key: 'game_id'
       }
     },
-    team_id: {
+    team_id_home: {
       type: DataTypes.INTEGER,
       unique: true,
       references: {
         model: 'team',
         key: 'team_id'
       }
-    }
+    },
+    team_id_away: {
+        type: DataTypes.INTEGER,
+        unique: true,
+        references: {
+          model: 'team',
+          key: 'team_id'
+        }
+      }
   },
   {
     sequelize,
