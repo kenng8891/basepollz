@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Game, User, Comment, Team, Vote } = require("../models");
+const { Game, User, Comment, Vote } = require("../models");
 const withAuth = require("../utils/auth");
 
 //CHANGES TO MAKE: THIS SHOULD BE THE USER PROFILE PAGE.
@@ -8,19 +8,27 @@ const withAuth = require("../utils/auth");
 //List games the user voted on, with game info, and whether they received a point or not
 //THEN list leaderboard below? If Time?
 
-// get all posts for dashboard
+// get all games for dashboard
 router.get("/", withAuth, (req, res) => {
   console.log(req.session);
   console.log("======================");
-  Post.findAll({
+  Game.findAll({
     where: {
       user_id: req.session.user_id,
     },
     attributes: [
-      "id",
-      "game_url",
-      "title",
-      "created_at",
+      'id',
+      'game_id',
+      'game_date',
+      'game_status',
+      'team_name_home',
+      'team_name_away',
+      'team_id_home',
+      'team_id_away',
+      'team_score_home',
+      'team_score_away',
+      'team_isWinner_home',
+      'team_isWinner_away',
       [
         sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
@@ -31,21 +39,17 @@ router.get("/", withAuth, (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "game_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],
         },
       },
-      {
-        model: User,
-        attributes: ["username"],
-      },
     ],
   })
-    .then((dbPostData) => {
-      const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("dashboard", { posts, loggedIn: true });
+    .then((dbGameData) => {
+      const games = dbGameData.map((game) => game.get({ plain: true }));
+      res.render("dashboard", { games, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
@@ -54,15 +58,23 @@ router.get("/", withAuth, (req, res) => {
 });
 
 router.get("/edit/:id", withAuth, (req, res) => {
-  Post.findByPk(req.params.id, {
+  Game.findByPk(req.params.id, {
     attributes: [
-      "id",
-      "post_url",
-      "title",
-      "created_at",
+      'id',
+      'game_id',
+      'game_date',
+      'game_status',
+      'team_name_home',
+      'team_name_away',
+      'team_id_home',
+      'team_id_away',
+      'team_score_home',
+      'team_score_away',
+      'team_isWinner_home',
+      'team_isWinner_away',
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)"
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
         ),
         "vote_count",
       ],
@@ -70,24 +82,20 @@ router.get("/edit/:id", withAuth, (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "game_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],
         },
       },
-      {
-        model: User,
-        attributes: ["username"],
-      },
     ],
   })
-    .then((dbPostData) => {
-      if (dbPostData) {
-        const post = dbPostData.get({ plain: true });
+    .then((dbGameData) => {
+      if (dbGameData) {
+        const game = dbGameData.get({ plain: true });
 
-        res.render("edit-post", {
-          post,
+        res.render("edit-game", {
+          game,
           loggedIn: true,
         });
       } else {

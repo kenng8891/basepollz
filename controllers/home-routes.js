@@ -1,38 +1,42 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment, Vote } = require('../models');
+const { Game, User, Comment, Vote } = require('../models');
 
-// get all posts for homepage
+// get all games for homepage
 router.get('/', (req, res) => {
   console.log('======================');
-  Post.findAll({
+  Game.findAll({
     attributes: [
       'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'game_id',
+      'game_date',
+      'game_status',
+      'team_name_home',
+      'team_name_away',
+      'team_id_home',
+      'team_id_away',
+      'team_score_home',
+      'team_score_away',
+      'team_isWinner_home',
+      'team_isWinner_away'
+      //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'game_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
         }
       },
-      {
-        model: User,
-        attributes: ['username']
-      }
     ]
   })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
+    .then(dbGameData => {
+      const games = dbGameData.map(game => game.get({ plain: true }));
 
       res.render('homepage', {
-        posts,
+        games,
         loggedIn: req.session.loggedIn
       });
     })
@@ -42,44 +46,48 @@ router.get('/', (req, res) => {
     });
 });
 
-// get single post
-router.get('/post/:id', (req, res) => {
-  Post.findOne({
+// get single game
+router.get('/game/:id', (req, res) => {
+  Game.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
-      'post_url',
-      'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      'game_id',
+      'game_date',
+      'game_status',
+      'team_name_home',
+      'team_name_away',
+      'team_id_home',
+      'team_id_away',
+      'team_score_home',
+      'team_score_away',
+      'team_isWinner_home',
+      'team_isWinner_away',
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'game_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
         }
       },
-      {
-        model: User,
-        attributes: ['username']
-      }
     ]
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
+    .then(dbGameData => {
+      if (!dbGameData) {
+        res.status(404).json({ message: 'No game found with this id' });
         return;
       }
 
-      const post = dbPostData.get({ plain: true });
+      const game = dbGameData.get({ plain: true });
 
-      res.render('single-post', {
-        post,
+      res.render('single-game', {
+        game,
         loggedIn: req.session.loggedIn
       });
     })

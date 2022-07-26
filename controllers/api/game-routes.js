@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Game, User, Comment, Vote, Team } = require('../../models');
+const { Game, User, Comment, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
 const fetchGameData = require('../../public/javascript/fetch-data')
 

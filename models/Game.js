@@ -55,7 +55,7 @@ Game.init(
       type: DataTypes.DATEONLY,
       allowNull: false,
     },
-    game_id: { //formerly 'game_url'
+    game_id: { 
       type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
@@ -65,37 +65,29 @@ Game.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
-      references: {
-        model: "team",
-        key: "team_id"
-      }
     },
-    team_name_home:{
+    team_name_home: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      references: {
-        model: "team",
-        key: "team_name"
-      }
+      unique: true
     },
     team_id_away:{
       type: DataTypes.INTEGER,
       allowNull: false,
       unique: true,
-      references: {
-        model: "team",
-        key: "team_id"
-      }
+    },
+    team_logoPath_home: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    team_logoPath_away: {
+        type: DataTypes.STRING,
+        allowNull: false
     },
     team_name_away:{
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      references: {
-        model: "team",
-        key: "team_name"
-      }
     },
     game_status:{
       type: DataTypes.STRING,

@@ -1,10 +1,8 @@
 // import all models
 const Game = require('./Game');
-const Team = require('./Team');
 const User = require('./User');
 const Vote = require('./Vote');
 const Comment = require('./Comment');
-const GameTeam = require('./GameTeam');
 
 // create associations
 
@@ -70,23 +68,23 @@ Comment.belongsTo(Game, {
 });
 
 
-// //NEW: make sure this is correct
-Game.belongsToMany(Team, {
-  through: GameTeam,
-  as: "team_id",
-  foreignKey: 'game_id',
+// // //NEW: make sure this is correct
+// Game.belongsToMany(Team, {
+//   through: GameTeam,
+//   as: "team_id",
+//   foreignKey: 'game_id',
   
-});
+// });
 
-Team.belongsToMany(Game, {
-  through: GameTeam,
-  as: "game_id",
-  foreignKey: 'team_id',
+// Team.belongsToMany(Game, {
+//   through: GameTeam,
+//   as: "game_id",
+//   foreignKey: 'team_id',
  
-});
+// });
 
 
-module.exports = { User, Game, Vote, Comment, Team, GameTeam };
+module.exports = { User, Game, Vote, Comment};
 
 
 
