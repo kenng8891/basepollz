@@ -1,6 +1,6 @@
 const { Game } = require("../models");
 
-const gamedata = [
+const games = [
   {
     title: "Game 1",
     post_url: "https://www.espn.com/mlb/boxscore/_/gameId/401355557",
@@ -48,6 +48,6 @@ const gamedata = [
   },
 ];
 
-const seedGames = () => Game.bulkCreate(gamedata);
+const seedGames = () => Game.bulkCreate(games);
 
 module.exports = seedGames;
