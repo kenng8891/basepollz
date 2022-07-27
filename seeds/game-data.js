@@ -6,16 +6,11 @@ const gameapi = [
     game_id: 661064,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 134,
-        name: "Pittsburgh Pirates",
-      },
-      home: {
-        id: 112,
-        name: "Chicago Cubs",
-      },
-    },
+    team_id_away: 134,
+    team_name_away: "Pittsburgh Pirates",
+
+    team_id_home: 112,
+    team_name_home: "Chicago Cubs",
   },
 
   {
@@ -23,16 +18,10 @@ const gameapi = [
     game_id: 663029,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 146,
-        name: "Miami Marlins",
-      },
-      home: {
-        id: 113,
-        name: "Cincinnati Reds",
-      },
-    },
+    team_id_away: 146,
+    team_name_away: "Miami Marlins",
+    team_id_home: 113,
+    team_name_home: "Cincinnati Reds",
   },
 
   {
@@ -40,16 +29,11 @@ const gameapi = [
     game_id: 661054,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 139,
-        name: "Tampa Bay Rays",
-      },
-      home: {
-        id: 110,
-        name: "Baltimore Orioles",
-      },
-    },
+    team_id_away: 139,
+    team_name_away: "Tampa Bay Rays",
+
+    team_id_home: 110,
+    team_name_home: "Baltimore Orioles",
   },
 
   {
@@ -57,16 +41,11 @@ const gameapi = [
     game_id: 661563,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 144,
-        name: "Atlanta Braves",
-      },
-      home: {
-        id: 143,
-        name: "Philadelphia Phillies",
-      },
-    },
+    team_id_away: 144,
+    team_name_away: "Atlanta Braves",
+
+    team_id_home: 143,
+    team_name_home: "Philadelphia Phillies",
   },
 
   {
@@ -74,16 +53,11 @@ const gameapi = [
     game_id: 661716,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 138,
-        name: "St. Louis Cardinals",
-      },
-      home: {
-        id: 141,
-        name: "Toronto Blue Jays",
-      },
-    },
+    team_id_away: 138,
+    team_name_away: "St. Louis Cardinals",
+
+    team_id_home: 141,
+    team_name_home: "Toronto Blue Jays",
   },
 
   {
@@ -91,16 +65,11 @@ const gameapi = [
     game_id: 663203,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 114,
-        name: "Cleveland Guardians",
-      },
-      home: {
-        id: 111,
-        name: "Boston Red Sox",
-      },
-    },
+    team_id_away: 114,
+    team_name_away: "Cleveland Guardians",
+
+    team_id_home: 111,
+    team_name_home: "Boston Red Sox",
   },
 
   {
@@ -108,16 +77,11 @@ const gameapi = [
     game_id: 662813,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 135,
-        name: "San Diego Padres",
-      },
-      home: {
-        id: 116,
-        name: "Detroit Tigers",
-      },
-    },
+    team_id_away: 135,
+    team_name_away: "San Diego Padres",
+
+    team_id_home: 116,
+    team_name_home: "Detroit Tigers",
   },
 
   {
@@ -125,16 +89,11 @@ const gameapi = [
     game_id: 662438,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 147,
-        name: "New York Yankees",
-      },
-      home: {
-        id: 121,
-        name: "New York Mets",
-      },
-    },
+    team_id_away: 147,
+    team_name_away: "New York Yankees",
+
+    team_id_home: 121,
+    team_name_home: "New York Mets",
   },
 
   {
@@ -142,16 +101,11 @@ const gameapi = [
     game_id: 662653,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 108,
-        name: "Los Angeles Angels",
-      },
-      home: {
-        id: 118,
-        name: "Kansas City Royals",
-      },
-    },
+    team_id_away: 108,
+    team_name_away: "Los Angeles Angels",
+
+    team_id_home: 118,
+    team_name_home: "Kansas City Royals",
   },
 
   {
@@ -159,15 +113,11 @@ const gameapi = [
     game_id: 661281,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 142,
-      },
-      home: {
-        id: 158,
-        name: "Milwaukee Brewers",
-      },
-    },
+    team_id_away: 142,
+    team_name_away: "Minnesota Twins",
+
+    team_id_home: 158,
+    team_name_home: "Milwaukee Brewers",
   },
 
   {
@@ -175,16 +125,11 @@ const gameapi = [
     game_id: 661079,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 145,
-        name: "Chicago White Sox",
-      },
-      home: {
-        id: 115,
-        name: "Colorado Rockies",
-      },
-    },
+    team_id_away: 145,
+    team_name_away: "Chicago White Sox",
+
+    team_id_home: 115,
+    team_name_home: "Colorado Rockies",
   },
 
   {
@@ -192,16 +137,11 @@ const gameapi = [
     game_id: 662346,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 117,
-        name: "Houston Astros",
-      },
-      home: {
-        id: 133,
-        name: "Oakland Athletics",
-      },
-    },
+    team_id_away: 117,
+    team_name_away: "Houston Astros",
+
+    team_id_home: 133,
+    team_name_home: "Oakland Athletics",
   },
 
   {
@@ -209,16 +149,11 @@ const gameapi = [
     game_id: 663314,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 137,
-        name: "San Francisco Giants",
-      },
-      home: {
-        id: 109,
-        name: "Arizona Diamondbacks",
-      },
-    },
+    team_id_away: 137,
+    team_name_away: "San Francisco Giants",
+
+    team_id_home: 109,
+    team_name_home: "Arizona Diamondbacks",
   },
 
   {
@@ -226,16 +161,11 @@ const gameapi = [
     game_id: 662573,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 120,
-        name: "Washington Nationals",
-      },
-      home: {
-        id: 119,
-        name: "Los Angeles Dodgers",
-      },
-    },
+    team_id_away: 120,
+    team_name_away: "Washington Nationals",
+
+    team_id_home: 119,
+    team_name_home: "Los Angeles Dodgers",
   },
 
   {
@@ -243,16 +173,11 @@ const gameapi = [
     game_id: 662184,
     game_date: "2022-07-26",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 140,
-        name: "Texas Rangers",
-      },
-      home: {
-        id: 136,
-        name: "Seattle Mariners",
-      },
-    },
+    team_id_away: 140,
+    team_name_away: "Texas Rangers",
+
+    team_id_home: 136,
+    team_name_home: "Seattle Mariners",
   },
 
   {
@@ -260,16 +185,11 @@ const gameapi = [
     game_id: 661554,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 144,
-        name: "Atlanta Braves",
-      },
-      home: {
-        id: 143,
-        name: "Philadelphia Phillies",
-      },
-    },
+    team_id_away: 144,
+    team_name_away: "Atlanta Braves",
+
+    team_id_home: 143,
+    team_name_home: "Philadelphia Phillies",
   },
 
   {
@@ -277,16 +197,11 @@ const gameapi = [
     game_id: 662900,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 135,
-        name: "San Diego Padres",
-      },
-      home: {
-        id: 116,
-        name: "Detroit Tigers",
-      },
-    },
+    team_id_away: 135,
+    team_name_away: "San Diego Padres",
+
+    team_id_home: 116,
+    team_name_home: "Detroit Tigers",
   },
 
   {
@@ -294,16 +209,11 @@ const gameapi = [
     game_id: 662652,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 108,
-        name: "Los Angeles Angels",
-      },
-      home: {
-        id: 118,
-        name: "Kansas City Royals",
-      },
-    },
+    team_id_away: 108,
+    team_name_away: "Los Angeles Angels",
+
+    team_id_home: 118,
+    team_name_home: "Kansas City Royals",
   },
 
   {
@@ -311,15 +221,11 @@ const gameapi = [
     game_id: 661249,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 142,
-      },
-      home: {
-        id: 158,
-        name: "Milwaukee Brewers",
-      },
-    },
+    team_id_away: 142,
+    team_name_away: "Minnesota Twins",
+
+    team_id_home: 158,
+    team_name_home: "Milwaukee Brewers",
   },
 
   {
@@ -327,16 +233,11 @@ const gameapi = [
     game_id: 662565,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 120,
-        name: "Washington Nationals",
-      },
-      home: {
-        id: 119,
-        name: "Los Angeles Dodgers",
-      },
-    },
+    team_id_away: 120,
+    team_name_away: "Washington Nationals",
+
+    team_id_home: 119,
+    team_name_home: "Los Angeles Dodgers",
   },
 
   {
@@ -344,16 +245,11 @@ const gameapi = [
     game_id: 661078,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 145,
-        name: "Chicago White Sox",
-      },
-      home: {
-        id: 115,
-        name: "Colorado Rockies",
-      },
-    },
+    team_id_away: 145,
+    team_name_away: "Chicago White Sox",
+
+    team_id_home: 115,
+    team_name_home: "Colorado Rockies",
   },
 
   {
@@ -361,16 +257,11 @@ const gameapi = [
     game_id: 662345,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 117,
-        name: "Houston Astros",
-      },
-      home: {
-        id: 133,
-        name: "Oakland Athletics",
-      },
-    },
+    team_id_away: 117,
+    team_name_away: "Houston Astros",
+
+    team_id_home: 133,
+    team_name_home: "Oakland Athletics",
   },
 
   {
@@ -378,16 +269,11 @@ const gameapi = [
     game_id: 663294,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 137,
-        name: "San Francisco Giants",
-      },
-      home: {
-        id: 109,
-        name: "Arizona Diamondbacks",
-      },
-    },
+    team_id_away: 137,
+    team_name_away: "San Francisco Giants",
+
+    team_id_home: 109,
+    team_name_home: "Arizona Diamondbacks",
   },
 
   {
@@ -395,16 +281,12 @@ const gameapi = [
     game_id: 662165,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 140,
-        name: "Texas Rangers",
-      },
-      home: {
-        id: 136,
-        name: "Seattle Mariners",
-      },
-    },
+
+    team_id_away: 140,
+    team_name_away: "Texas Rangers",
+
+    team_id_home: 136,
+    team_name_home: "Seattle Mariners",
   },
 
   {
@@ -412,16 +294,12 @@ const gameapi = [
     game_id: 663028,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 146,
-        name: "Miami Marlins",
-      },
-      home: {
-        id: 113,
-        name: "Cincinnati Reds",
-      },
-    },
+
+    team_id_away: 146,
+    team_name_away: "Miami Marlins",
+
+    team_id_home: 113,
+    team_name_home: "Cincinnati Reds",
   },
 
   {
@@ -429,16 +307,12 @@ const gameapi = [
     game_id: 661053,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 139,
-        name: "Tampa Bay Rays",
-      },
-      home: {
-        id: 110,
-        name: "Baltimore Orioles",
-      },
-    },
+
+    team_id_away: 139,
+    team_name_away: "Tampa Bay Rays",
+
+    team_id_home: 110,
+    team_name_home: "Baltimore Orioles",
   },
 
   {
@@ -446,16 +320,11 @@ const gameapi = [
     game_id: 661715,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 138,
-        name: "St. Louis Cardinals",
-      },
-      home: {
-        id: 141,
-        name: "Toronto Blue Jays",
-      },
-    },
+    team_id_away: 138,
+    team_name_away: "St. Louis Cardinals",
+
+    team_id_home: 141,
+    team_name_home: "Toronto Blue Jays",
   },
 
   {
@@ -463,16 +332,12 @@ const gameapi = [
     game_id: 663191,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 114,
-        name: "Cleveland Guardians",
-      },
-      home: {
-        id: 111,
-        name: "Boston Red Sox",
-      },
-    },
+
+    team_id_away: 114,
+    team_name_away: "Cleveland Guardians",
+
+    team_id_home: 111,
+    team_name_home: "Boston Red Sox",
   },
 
   {
@@ -480,16 +345,12 @@ const gameapi = [
     game_id: 662420,
     game_date: "2022-07-27",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 147,
-        name: "New York Yankees",
-      },
-      home: {
-        id: 121,
-        name: "New York Mets",
-      },
-    },
+
+    team_id_away: 147,
+    team_name_away: "New York Yankees",
+
+    team_id_home: 121,
+    team_name_home: "New York Mets",
   },
 
   {
@@ -497,16 +358,12 @@ const gameapi = [
     game_id: 661052,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 139,
-        name: "Tampa Bay Rays",
-      },
-      home: {
-        id: 110,
-        name: "Baltimore Orioles",
-      },
-    },
+
+    team_id_away: 139,
+    team_name_away: "Tampa Bay Rays",
+
+    team_id_home: 110,
+    team_name_home: "Baltimore Orioles",
   },
 
   {
@@ -514,16 +371,12 @@ const gameapi = [
     game_id: 663027,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 146,
-        name: "Miami Marlins",
-      },
-      home: {
-        id: 113,
-        name: "Cincinnati Reds",
-      },
-    },
+
+    team_id_away: 146,
+    team_name_away: "Miami Marlins",
+
+    team_id_home: 113,
+    team_name_home: "Cincinnati Reds",
   },
 
   {
@@ -531,16 +384,12 @@ const gameapi = [
     game_id: 662326,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 143,
-        name: "Philadelphia Phillies",
-      },
-      home: {
-        id: 134,
-        name: "Pittsburgh Pirates",
-      },
-    },
+
+    team_id_away: 143,
+    team_name_away: "Philadelphia Phillies",
+
+    team_id_home: 134,
+    team_name_home: "Pittsburgh Pirates",
   },
 
   {
@@ -548,16 +397,12 @@ const gameapi = [
     game_id: 661257,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 118,
-        name: "Kansas City Royals",
-      },
-      home: {
-        id: 147,
-        name: "New York Yankees",
-      },
-    },
+
+    team_id_away: 118,
+    team_name_away: "Kansas City Royals",
+
+    team_id_home: 147,
+    team_name_home: "New York Yankees",
   },
 
   {
@@ -565,16 +410,12 @@ const gameapi = [
     game_id: 661714,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 116,
-        name: "Detroit Tigers",
-      },
-      home: {
-        id: 141,
-        name: "Toronto Blue Jays",
-      },
-    },
+
+    team_id_away: 116,
+    team_name_away: "Detroit Tigers",
+
+    team_id_home: 141,
+    team_name_home: "Toronto Blue Jays",
   },
 
   {
@@ -582,16 +423,12 @@ const gameapi = [
     game_id: 663200,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 114,
-        name: "Cleveland Guardians",
-      },
-      home: {
-        id: 111,
-        name: "Boston Red Sox",
-      },
-    },
+
+    team_id_away: 114,
+    team_name_away: "Cleveland Guardians",
+
+    team_id_home: 111,
+    team_name_home: "Boston Red Sox",
   },
 
   {
@@ -599,16 +436,12 @@ const gameapi = [
     game_id: 662907,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 136,
-        name: "Seattle Mariners",
-      },
-      home: {
-        id: 117,
-        name: "Houston Astros",
-      },
-    },
+
+    team_id_away: 136,
+    team_name_away: "Seattle Mariners",
+
+    team_id_home: 117,
+    team_name_home: "Houston Astros",
   },
 
   {
@@ -616,16 +449,12 @@ const gameapi = [
     game_id: 661077,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 119,
-        name: "Los Angeles Dodgers",
-      },
-      home: {
-        id: 115,
-        name: "Colorado Rockies",
-      },
-    },
+
+    team_id_away: 119,
+    team_name_away: "Los Angeles Dodgers",
+
+    team_id_home: 115,
+    team_name_home: "Colorado Rockies",
   },
 
   {
@@ -633,16 +462,12 @@ const gameapi = [
     game_id: 663380,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 140,
-        name: "Texas Rangers",
-      },
-      home: {
-        id: 108,
-        name: "Los Angeles Angels",
-      },
-    },
+
+    team_id_away: 140,
+    team_name_away: "Texas Rangers",
+
+    team_id_home: 108,
+    team_name_home: "Los Angeles Angels",
   },
 
   {
@@ -650,16 +475,12 @@ const gameapi = [
     game_id: 662058,
     game_date: "2022-07-28",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 112,
-        name: "Chicago Cubs",
-      },
-      home: {
-        id: 137,
-        name: "San Francisco Giants",
-      },
-    },
+
+    team_id_away: 112,
+    team_name_away: "Chicago Cubs",
+
+    team_id_home: 137,
+    team_name_home: "San Francisco Giants",
   },
 
   {
@@ -667,16 +488,12 @@ const gameapi = [
     game_id: 663026,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 110,
-        name: "Baltimore Orioles",
-      },
-      home: {
-        id: 113,
-        name: "Cincinnati Reds",
-      },
-    },
+
+    team_id_away: 110,
+    team_name_away: "Baltimore Orioles",
+
+    team_id_home: 113,
+    team_name_home: "Cincinnati Reds",
   },
 
   {
@@ -684,16 +501,12 @@ const gameapi = [
     game_id: 661372,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 121,
-        name: "New York Mets",
-      },
-      home: {
-        id: 146,
-        name: "Miami Marlins",
-      },
-    },
+
+    team_id_away: 121,
+    team_name_away: "New York Mets",
+
+    team_id_home: 146,
+    team_name_home: "Miami Marlins",
   },
 
   {
@@ -701,16 +514,12 @@ const gameapi = [
     game_id: 662477,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 138,
-        name: "St. Louis Cardinals",
-      },
-      home: {
-        id: 120,
-        name: "Washington Nationals",
-      },
-    },
+
+    team_id_away: 138,
+    team_name_away: "St. Louis Cardinals",
+
+    team_id_home: 120,
+    team_name_home: "Washington Nationals",
   },
 
   {
@@ -718,16 +527,12 @@ const gameapi = [
     game_id: 662435,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 143,
-        name: "Philadelphia Phillies",
-      },
-      home: {
-        id: 134,
-        name: "Pittsburgh Pirates",
-      },
-    },
+
+    team_id_away: 143,
+    team_name_away: "Philadelphia Phillies",
+
+    team_id_home: 134,
+    team_name_home: "Pittsburgh Pirates",
   },
 
   {
@@ -735,16 +540,12 @@ const gameapi = [
     game_id: 661256,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 118,
-        name: "Kansas City Royals",
-      },
-      home: {
-        id: 147,
-        name: "New York Yankees",
-      },
-    },
+
+    team_id_away: 118,
+    team_name_away: "Kansas City Royals",
+
+    team_id_home: 147,
+    team_name_home: "New York Yankees",
   },
 
   {
@@ -752,16 +553,12 @@ const gameapi = [
     game_id: 661713,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 116,
-        name: "Detroit Tigers",
-      },
-      home: {
-        id: 141,
-        name: "Toronto Blue Jays",
-      },
-    },
+
+    team_id_away: 116,
+    team_name_away: "Detroit Tigers",
+
+    team_id_home: 141,
+    team_name_home: "Toronto Blue Jays",
   },
 
   {
@@ -769,16 +566,12 @@ const gameapi = [
     game_id: 661871,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 114,
-        name: "Cleveland Guardians",
-      },
-      home: {
-        id: 139,
-        name: "Tampa Bay Rays",
-      },
-    },
+
+    team_id_away: 114,
+    team_name_away: "Cleveland Guardians",
+
+    team_id_home: 139,
+    team_name_home: "Tampa Bay Rays",
   },
 
   {
@@ -787,15 +580,11 @@ const gameapi = [
     game_date: "2022-07-29",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 158,
-      },
-      home: {
-        id: 111,
-        name: "Boston Red Sox",
-      },
-    },
+    team_id_away: 158,
+    team_name_away: "Milwaukee Brewers",
+
+    team_id_home: 111,
+    team_name_home: "Boston Red Sox",
   },
 
   {
@@ -803,16 +592,12 @@ const gameapi = [
     game_id: 661501,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 109,
-        name: "Arizona Diamondbacks",
-      },
-      home: {
-        id: 144,
-        name: "Atlanta Braves",
-      },
-    },
+
+    team_id_away: 109,
+    team_name_away: "Arizona Diamondbacks",
+
+    team_id_home: 144,
+    team_name_home: "Atlanta Braves",
   },
 
   {
@@ -820,17 +605,12 @@ const gameapi = [
     game_id: 662745,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 136,
-        name: "Seattle Mariners",
-      },
 
-      home: {
-        id: 117,
-        name: "Houston Astros",
-      },
-    },
+    team_id_away: 136,
+    team_name_away: "Seattle Mariners",
+
+    team_id_home: 117,
+    team_name_home: "Houston Astros",
   },
 
   {
@@ -838,16 +618,12 @@ const gameapi = [
     game_id: 661406,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 133,
-        name: "Oakland Athletics",
-      },
-      home: {
-        id: 145,
-        name: "Chicago White Sox",
-      },
-    },
+
+    team_id_away: 133,
+    team_name_away: "Oakland Athletics",
+
+    team_id_home: 145,
+    team_name_home: "Chicago White Sox",
   },
 
   {
@@ -855,16 +631,12 @@ const gameapi = [
     game_id: 661076,
     game_date: "2022-07-29",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 119,
-        name: "Los Angeles Dodgers",
-      },
-      home: {
-        id: 115,
-        name: "Colorado Rockies",
-      },
-    },
+
+    team_id_away: 119,
+    team_name_away: "Los Angeles Dodgers",
+
+    team_id_home: 115,
+    team_name_home: "Colorado Rockies",
   },
 
   {
@@ -873,16 +645,11 @@ const gameapi = [
     game_date: "2022-07-29",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 140,
-        name: "Texas Rangers",
-      },
-      home: {
-        id: 108,
-        name: "Los Angeles Angels",
-      },
-    },
+    team_id_away: 140,
+    team_name_away: "Texas Rangers",
+
+    team_id_home: 108,
+    team_name_home: "Los Angeles Angels",
   },
 
   {
@@ -891,15 +658,11 @@ const gameapi = [
     game_date: "2022-07-29",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 142,
-      },
-      home: {
-        id: 135,
-        name: "San Diego Padres",
-      },
-    },
+    team_id_away: 142,
+    team_name_away: "Minnesota Twins",
+
+    team_id_home: 135,
+    team_name_home: "San Diego Padres",
   },
 
   {
@@ -908,16 +671,11 @@ const gameapi = [
     game_date: "2022-07-29",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 112,
-        name: "Chicago Cubs",
-      },
-      home: {
-        id: 137,
-        name: "San Francisco Giants",
-      },
-    },
+    team_id_away: 112,
+    team_name_away: "Chicago Cubs",
+
+    team_id_home: 137,
+    team_name_home: "San Francisco Giants",
   },
 
   {
@@ -925,16 +683,12 @@ const gameapi = [
     game_id: 661870,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 114,
-        name: "Cleveland Guardians",
-      },
-      home: {
-        id: 139,
-        name: "Tampa Bay Rays",
-      },
-    },
+
+    team_id_away: 114,
+    team_name_away: "Cleveland Guardians",
+
+    team_id_home: 139,
+    team_name_home: "Tampa Bay Rays",
   },
 
   {
@@ -943,16 +697,11 @@ const gameapi = [
     game_date: "2022-07-30",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 118,
-        name: "Kansas City Royals",
-      },
-      home: {
-        id: 147,
-        name: "New York Yankees",
-      },
-    },
+    team_id_away: 118,
+    team_name_away: "Kansas City Royals",
+
+    team_id_home: 147,
+    team_name_home: "New York Yankees",
   },
 
   {
@@ -961,16 +710,11 @@ const gameapi = [
     game_date: "2022-07-30",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 116,
-        name: "Detroit Tigers",
-      },
-      home: {
-        id: 141,
-        name: "Toronto Blue Jays",
-      },
-    },
+    team_id_away: 116,
+    team_name_away: "Detroit Tigers",
+
+    team_id_home: 141,
+    team_name_home: "Toronto Blue Jays",
   },
 
   {
@@ -979,16 +723,11 @@ const gameapi = [
     game_date: "2022-07-30",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 158,
-        name: "Milwaukee Brewers",
-      },
-      home: {
-        id: 111,
-        name: "Boston Red Sox",
-      },
-    },
+    team_id_away: 158,
+    team_name_away: "Milwaukee Brewers",
+
+    team_id_home: 111,
+    team_name_home: "Boston Red Sox",
   },
 
   {
@@ -996,16 +735,12 @@ const gameapi = [
     game_id: 661371,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 121,
-        name: "New York Mets",
-      },
-      home: {
-        id: 146,
-        name: "Miami Marlins",
-      },
-    },
+
+    team_id_away: 121,
+    team_name_away: "New York Mets",
+
+    team_id_home: 146,
+    team_name_home: "Miami Marlins",
   },
 
   {
@@ -1013,17 +748,12 @@ const gameapi = [
     game_id: 663025,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 110,
-        name: "Baltimore Orioles",
-      },
 
-      home: {
-        id: 113,
-        name: "Cincinnati Reds",
-      },
-    },
+    team_id_away: 110,
+    team_name_away: "Baltimore Orioles",
+
+    team_id_home: 113,
+    team_name_home: "Cincinnati Reds",
   },
 
   {
@@ -1032,16 +762,11 @@ const gameapi = [
     game_date: "2022-07-30",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 136,
-        name: "Seattle Mariners",
-      },
-      home: {
-        id: 117,
-        name: "Houston Astros",
-      },
-    },
+    team_id_away: 136,
+    team_name_away: "Seattle Mariners",
+
+    team_id_home: 117,
+    team_name_home: "Houston Astros",
   },
 
   {
@@ -1049,16 +774,12 @@ const gameapi = [
     game_id: 662476,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 138,
-        name: "St. Louis Cardinals",
-      },
-      home: {
-        id: 120,
-        name: "Washington Nationals",
-      },
-    },
+
+    team_id_away: 138,
+    team_name_away: "St. Louis Cardinals",
+
+    team_id_home: 120,
+    team_name_home: "Washington Nationals",
   },
 
   {
@@ -1067,15 +788,11 @@ const gameapi = [
     game_date: "2022-07-30",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 142,
-      },
-      home: {
-        id: 135,
-        name: "San Diego Padres",
-      },
-    },
+    team_id_away: 142,
+    team_name_away: "Minnesota Twins",
+
+    team_id_home: 135,
+    team_name_home: "San Diego Padres",
   },
 
   {
@@ -1083,16 +800,12 @@ const gameapi = [
     game_id: 662415,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 143,
-        name: "Philadelphia Phillies",
-      },
-      home: {
-        id: 134,
-        name: "Pittsburgh Pirates",
-      },
-    },
+
+    team_id_away: 143,
+    team_name_away: "Philadelphia Phillies",
+
+    team_id_home: 134,
+    team_name_home: "Pittsburgh Pirates",
   },
 
   {
@@ -1100,16 +813,12 @@ const gameapi = [
     game_id: 661451,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 133,
-        name: "Oakland Athletics",
-      },
-      home: {
-        id: 145,
-        name: "Chicago White Sox",
-      },
-    },
+
+    team_id_away: 133,
+    team_name_away: "Oakland Athletics",
+
+    team_id_home: 145,
+    team_name_home: "Chicago White Sox",
   },
 
   {
@@ -1118,16 +827,11 @@ const gameapi = [
     game_date: "2022-07-30",
     game_status: "Preview",
 
-    teams: {
-      away: {
-        id: 109,
-        name: "Arizona Diamondbacks",
-      },
-      home: {
-        id: 144,
-        name: "Atlanta Braves",
-      },
-    },
+    team_id_away: 109,
+    team_name_away: "Arizona Diamondbacks",
+
+    team_id_home: 144,
+    team_name_home: "Atlanta Braves",
   },
 
   {
@@ -1135,16 +839,12 @@ const gameapi = [
     game_id: 662989,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 119,
-        name: "Los Angeles Dodgers",
-      },
-      home: {
-        id: 115,
-        name: "Colorado Rockies",
-      },
-    },
+
+    team_id_away: 119,
+    team_name_away: "Los Angeles Dodgers",
+
+    team_id_home: 115,
+    team_name_home: "Colorado Rockies",
   },
 
   {
@@ -1152,16 +852,12 @@ const gameapi = [
     game_id: 662112,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 112,
-        name: "Chicago Cubs",
-      },
-      home: {
-        id: 137,
-        name: "San Francisco Giants",
-      },
-    },
+
+    team_id_away: 112,
+    team_name_away: "Chicago Cubs",
+
+    team_id_home: 137,
+    team_name_home: "San Francisco Giants",
   },
 
   {
@@ -1169,16 +865,12 @@ const gameapi = [
     game_id: 663378,
     game_date: "2022-07-30",
     game_status: "Preview",
-    teams: {
-      away: {
-        id: 140,
-        name: "Texas Rangers",
-      },
-      home: {
-        id: 108,
-        name: "Los Angeles Angels",
-      },
-    },
+
+    team_id_away: 140,
+    team_name_away: "Texas Rangers",
+
+    team_id_home: 108,
+    team_name_home: "Los Angeles Angels",
   },
 ];
 
