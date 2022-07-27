@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Game, User, Comment, Vote } = require('../models');
 
-// get all games for homepage
+// get all games for homepage (FUTURE GAMES ONLY FOR MAIN SCREEN)
 router.get('/', (req, res) => {
   console.log('======================');
   Game.findAll({
@@ -31,12 +31,31 @@ router.get('/', (req, res) => {
         }
       },
     ]
+    // where: {
+    //   game_status : 'Preview'
+    // }
   })
     .then(dbGameData => {
-      const games = dbGameData.map(game => game.get({ plain: true }));
+      const games= dbGameData.map(game => game.get({ plain: true }));
+      let gamesFuture = [];
+      let gamesPast = [];
+
+      for (i=0; i<games.length; i++){
+        if(games[i].game_status === 'Preview'){
+          gamesFuture.push(games[i]);
+        }else{
+          gamesPast.push(games[i]);
+        }
+      }
+
+      console.log('***********************************')
+      console.log(gamesPast);
+      console.log('***********************************')
+      console.log(gamesFuture);
 
       res.render('homepage', {
-        games,
+        gamesFuture,
+        gamesPast,
         loggedIn: req.session.loggedIn
       });
     })

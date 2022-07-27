@@ -1,18 +1,50 @@
-<ol class="game-list">
-  {{#each games as |game|}}
-  <li>
-    <article class="game">
-      <div class="title">
-        <a href="{{game.game_url}}" target="_blank">{{game.title}}</a>
-        <span>({{game.game_url}})</span>
-      </div>
-      <div class="meta">
-        {{game.vote_count}} point(s) by {{game.user.username}} on
-        {{game.created_at}}
-        |
-        <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
-      </div>
-    </article>
-  </li>
-  {{/each}}
-</ol>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 col-lg-8 border-bottom">
+      <ol class="game-list">
+        {{#each gamesFuture as |game|}}
+        <li>
+          <article class ='game'>
+            <div class="title">
+              <a href="{{game.game_url}}" target="_blank">{{game.team_name_home}} VS. {{game/team_name_away}}</a>
+              <span>({{game_date}})</span>
+            </div>
+            <div class="meta">
+              {{game.vote_count}} point(s) by {{game.user.username}} on
+              {{game.created_at}}
+              |
+              <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
+            </div>
+          </article>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 border-left">
+
+      <ol class="game-list">
+        {{#each gamesPast as |game|}}
+        <li>
+          <article class ='game'>
+            <div class="title">
+              <a href="{{game.game_url}}" target="_blank">{{game.team_name_home}} VS. {{game/team_name_away}}</a>
+              <span>({{game_date}})</span>
+            </div>
+            <div class="meta">
+              {{game.vote_count}} point(s) by {{game.user.username}} on
+              {{game.created_at}}
+              |
+              <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
+            </div>
+          </article>
+        </li>
+        {{/each}}
+      </ol>
+
+
+    </div>
+
+  </div>
+</div>
