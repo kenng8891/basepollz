@@ -1,5 +1,6 @@
 const seedUsers = require('./user-seeds');
-const seedPosts = require('./game-seeds');
+const seedGames = require('../public/javascript/fetch-data');
+// const seedGames = require('./game-data');
 const seedComments = require('./comment-seeds');
 const seedVotes = require('./vote-seeds');
 
@@ -11,7 +12,8 @@ const seedAll = async () => {
   await seedUsers();
   console.log('--------------');
 
-  await seedPosts();
+  //by module.exporting  getApi() in fetch-data.js, it just runs the fetch request when "seedGames" is called here.
+  await seedGames;
   console.log('--------------');
 
   await seedComments();
@@ -23,5 +25,4 @@ const seedAll = async () => {
   process.exit(0);
 };
 
-//if database is empty, seed all, else run fetch data, and seed that?
 seedAll();

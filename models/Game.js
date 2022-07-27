@@ -64,30 +64,32 @@ Game.init(
     team_id_home:{
       type: DataTypes.INTEGER,
       allowNull: true,
-      unique: true,
+      //unique: true,
     },
     team_name_home: {
       type: DataTypes.STRING,
       allowNull: true,
-      unique: true
+      //unique: true
     },
     team_id_away:{
       type: DataTypes.INTEGER,
       allowNull: true,
-      unique: true,
+      //unique: true,
     },
     team_logoPath_home: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
+        default: '../public/logo-files/_default_logo.png'
     },
     team_logoPath_away: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
+        default: '../public/logo-files/_default_logo.png'
     },
     team_name_away:{
       type: DataTypes.STRING,
       allowNull: true,
-      unique: true,
+     //unique: true,
     },
     game_status:{
       type: DataTypes.STRING,

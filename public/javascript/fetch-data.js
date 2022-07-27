@@ -1,6 +1,8 @@
+const { response } = require('express');
 const moment = require('moment');
 const fetch = require('node-fetch');
 const Game = require('../../models/Game');
+const gamesData = require('../../seeds/game-data');
 
 var now = moment();
 var priorDate = now.subtract(1, 'days').format('YYYY-MM-DD');
@@ -8,9 +10,9 @@ var priorDate = now.subtract(1, 'days').format('YYYY-MM-DD');
 var tmwDate = now.add(2, 'days').format('YYYY-MM-DD');
 const reloadTime = 6;
 
-
+let allGames = []
 let datesObj = {};
-let allGames = [];
+
 
 //SET THE INTERVAL TO CHECK HOURLY (IF CURRENT HOUR = 6AM, ELSE DO NOTHING   )
 
@@ -49,7 +51,7 @@ function getApi() {
           })
         }
       }
-      console.log(datesObj);
+      //console.log("************" + datesObj);
 
       //------------------------------------------------------------------------------
       //LEAVING THE FOLLOWING JUST IN CASE WE WANT TO GO BACK TO THE OLD WAY??
@@ -84,18 +86,32 @@ function getApi() {
       // }
 //---------------------------------------------------------------------------------
 
-      console.log(allGames);
+      // console.log(allGames);
 
       //ADD INTO DATABASE FROM DOWN YONDER
       
-      Game.bulkCreate(allGames);
+       return allGames
 
 
   })
+  .then((gamesData) => {
+    //console.log( gamesData); 
+    Game.bulkCreate(gamesData);
+    allGames = gamesData;
+  })
+
 }
 
 //took this off so i wouldn't do so many pulls, 
 //but we need it to run right when the server starts
 
+//let allGames = () => 
+
+
 getApi();
 // setInterval(retrieveData, 3600000);
+
+ //console.log( "test test" + allGames + "test test"); 
+const test = console.log("this is a")
+
+module.exports = getApi();

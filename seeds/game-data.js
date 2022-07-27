@@ -1,4 +1,4 @@
-const { Gamedata } = require("../models");
+const { Game } = require("../models");
 
 const gameapi = [
   {
