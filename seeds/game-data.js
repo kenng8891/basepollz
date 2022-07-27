@@ -8,14 +8,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 40,
-        losses: 56,
         id: 134,
         name: "Pittsburgh Pirates",
       },
       home: {
-        wins: 38,
-        losses: 57,
         id: 112,
         name: "Chicago Cubs",
       },
@@ -29,14 +25,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 45,
-        losses: 50,
         id: 146,
         name: "Miami Marlins",
       },
       home: {
-        wins: 36,
-        losses: 58,
         id: 113,
         name: "Cincinnati Reds",
       },
@@ -50,14 +42,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 52,
-        losses: 43,
         id: 139,
         name: "Tampa Bay Rays",
       },
       home: {
-        wins: 47,
-        losses: 48,
         id: 110,
         name: "Baltimore Orioles",
       },
@@ -71,14 +59,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 58,
-        losses: 39,
         id: 144,
         name: "Atlanta Braves",
       },
       home: {
-        wins: 49,
-        losses: 46,
         id: 143,
         name: "Philadelphia Phillies",
       },
@@ -92,15 +76,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 51,
-        losses: 46,
         id: 138,
         name: "St. Louis Cardinals",
       },
       home: {
-        wins: 53,
-        losses: 43,
-
         id: 141,
         name: "Toronto Blue Jays",
       },
@@ -114,15 +93,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 46,
         id: 114,
         name: "Cleveland Guardians",
       },
       home: {
-        wins: 48,
-        losses: 48,
-
         id: 111,
         name: "Boston Red Sox",
       },
@@ -136,13 +110,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 54,
-        losses: 43,
         id: 135,
         name: "San Diego Padres",
       },
       home: {
-        wins: 38,
         id: 116,
         name: "Detroit Tigers",
       },
@@ -156,14 +127,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 66,
-        losses: 31,
         id: 147,
         name: "New York Yankees",
       },
       home: {
-        wins: 59,
-        losses: 37,
         id: 121,
         name: "New York Mets",
       },
@@ -177,14 +144,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 40,
-        losses: 55,
         id: 108,
         name: "Los Angeles Angels",
       },
       home: {
-        wins: 38,
-        losses: 57,
         id: 118,
         name: "Kansas City Royals",
       },
@@ -198,14 +161,9 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 52,
-        losses: 44,
         id: 142,
-        name: "Minnesota Twins",
       },
       home: {
-        wins: 53,
-        losses: 43,
         id: 158,
         name: "Milwaukee Brewers",
       },
@@ -219,14 +177,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 48,
         id: 145,
         name: "Chicago White Sox",
       },
       home: {
-        wins: 43,
-        losses: 53,
         id: 115,
         name: "Colorado Rockies",
       },
@@ -240,14 +194,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 64,
-        losses: 32,
         id: 117,
         name: "Houston Astros",
       },
       home: {
-        wins: 35,
-        losses: 63,
         id: 133,
         name: "Oakland Athletics",
       },
@@ -261,14 +211,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 47,
         id: 137,
         name: "San Francisco Giants",
       },
       home: {
-        wins: 42,
-        losses: 53,
         id: 109,
         name: "Arizona Diamondbacks",
       },
@@ -282,14 +228,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 32,
-        losses: 65,
         id: 120,
         name: "Washington Nationals",
       },
       home: {
-        wins: 64,
-        losses: 30,
         id: 119,
         name: "Los Angeles Dodgers",
       },
@@ -303,14 +245,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 43,
-        losses: 51,
         id: 140,
         name: "Texas Rangers",
       },
       home: {
-        wins: 51,
-        losses: 45,
         id: 136,
         name: "Seattle Mariners",
       },
@@ -324,14 +262,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 58,
-        losses: 39,
         id: 144,
         name: "Atlanta Braves",
       },
       home: {
-        wins: 49,
-        losses: 46,
         id: 143,
         name: "Philadelphia Phillies",
       },
@@ -345,14 +279,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 54,
-        losses: 43,
         id: 135,
         name: "San Diego Padres",
       },
       home: {
-        wins: 38,
-        losses: 58,
         id: 116,
         name: "Detroit Tigers",
       },
@@ -366,14 +296,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 40,
-        losses: 55,
         id: 108,
         name: "Los Angeles Angels",
       },
       home: {
-        wins: 38,
-        losses: 57,
         id: 118,
         name: "Kansas City Royals",
       },
@@ -387,14 +313,9 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 52,
-        losses: 44,
         id: 142,
-        name: "Minnesota Twins",
       },
       home: {
-        wins: 53,
-        losses: 43,
         id: 158,
         name: "Milwaukee Brewers",
       },
@@ -408,14 +329,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 32,
-        losses: 65,
         id: 120,
         name: "Washington Nationals",
       },
       home: {
-        wins: 64,
-        losses: 30,
         id: 119,
         name: "Los Angeles Dodgers",
       },
@@ -429,14 +346,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 48,
         id: 145,
         name: "Chicago White Sox",
       },
       home: {
-        wins: 43,
-        losses: 53,
         id: 115,
         name: "Colorado Rockies",
       },
@@ -450,14 +363,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 64,
-        losses: 32,
         id: 117,
         name: "Houston Astros",
       },
       home: {
-        wins: 35,
-        losses: 63,
         id: 133,
         name: "Oakland Athletics",
       },
@@ -471,14 +380,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 47,
         id: 137,
         name: "San Francisco Giants",
       },
       home: {
-        wins: 42,
-        losses: 53,
         id: 109,
         name: "Arizona Diamondbacks",
       },
@@ -492,14 +397,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 43,
-        losses: 51,
         id: 140,
         name: "Texas Rangers",
       },
       home: {
-        wins: 51,
-        losses: 45,
         id: 136,
         name: "Seattle Mariners",
       },
@@ -513,14 +414,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 45,
-        losses: 50,
         id: 146,
         name: "Miami Marlins",
       },
       home: {
-        wins: 36,
-        losses: 58,
         id: 113,
         name: "Cincinnati Reds",
       },
@@ -534,14 +431,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 52,
-        losses: 43,
         id: 139,
         name: "Tampa Bay Rays",
       },
       home: {
-        wins: 47,
-        losses: 48,
         id: 110,
         name: "Baltimore Orioles",
       },
@@ -555,14 +448,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 51,
-        losses: 46,
         id: 138,
         name: "St. Louis Cardinals",
       },
       home: {
-        wins: 53,
-        losses: 43,
         id: 141,
         name: "Toronto Blue Jays",
       },
@@ -576,14 +465,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 46,
         id: 114,
         name: "Cleveland Guardians",
       },
       home: {
-        wins: 48,
-        losses: 48,
         id: 111,
         name: "Boston Red Sox",
       },
@@ -597,14 +482,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 66,
-        losses: 31,
         id: 147,
         name: "New York Yankees",
       },
       home: {
-        wins: 59,
-        losses: 37,
         id: 121,
         name: "New York Mets",
       },
@@ -618,14 +499,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 52,
-        losses: 43,
         id: 139,
         name: "Tampa Bay Rays",
       },
       home: {
-        wins: 47,
-        losses: 48,
         id: 110,
         name: "Baltimore Orioles",
       },
@@ -639,14 +516,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 45,
-        losses: 50,
         id: 146,
         name: "Miami Marlins",
       },
       home: {
-        wins: 36,
-        losses: 58,
         id: 113,
         name: "Cincinnati Reds",
       },
@@ -660,14 +533,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 49,
-        losses: 46,
         id: 143,
         name: "Philadelphia Phillies",
       },
       home: {
-        wins: 40,
-        losses: 56,
         id: 134,
         name: "Pittsburgh Pirates",
       },
@@ -681,14 +550,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 38,
-        losses: 57,
         id: 118,
         name: "Kansas City Royals",
       },
       home: {
-        wins: 66,
-        losses: 31,
         id: 147,
         name: "New York Yankees",
       },
@@ -702,14 +567,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 38,
-        losses: 58,
         id: 116,
         name: "Detroit Tigers",
       },
       home: {
-        wins: 53,
-        losses: 43,
         id: 141,
         name: "Toronto Blue Jays",
       },
@@ -723,14 +584,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 46,
         id: 114,
         name: "Cleveland Guardians",
       },
       home: {
-        wins: 48,
-        losses: 48,
         id: 111,
         name: "Boston Red Sox",
       },
@@ -744,14 +601,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 51,
-        losses: 45,
         id: 136,
         name: "Seattle Mariners",
       },
       home: {
-        wins: 64,
-        losses: 32,
         id: 117,
         name: "Houston Astros",
       },
@@ -765,14 +618,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 64,
-        losses: 30,
         id: 119,
         name: "Los Angeles Dodgers",
       },
       home: {
-        wins: 43,
-        losses: 53,
         id: 115,
         name: "Colorado Rockies",
       },
@@ -786,14 +635,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 43,
-        losses: 51,
         id: 140,
         name: "Texas Rangers",
       },
       home: {
-        wins: 40,
-        losses: 55,
         id: 108,
         name: "Los Angeles Angels",
       },
@@ -807,14 +652,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 38,
-        losses: 57,
         id: 112,
         name: "Chicago Cubs",
       },
       home: {
-        wins: 48,
-        losses: 47,
         id: 137,
         name: "San Francisco Giants",
       },
@@ -828,14 +669,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 47,
-        losses: 48,
         id: 110,
         name: "Baltimore Orioles",
       },
       home: {
-        wins: 36,
-        losses: 58,
         id: 113,
         name: "Cincinnati Reds",
       },
@@ -849,14 +686,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 59,
-        losses: 37,
         id: 121,
         name: "New York Mets",
       },
       home: {
-        wins: 45,
-        losses: 50,
         id: 146,
         name: "Miami Marlins",
       },
@@ -870,14 +703,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 51,
-        losses: 46,
         id: 138,
         name: "St. Louis Cardinals",
       },
       home: {
-        wins: 32,
-        losses: 65,
         id: 120,
         name: "Washington Nationals",
       },
@@ -891,14 +720,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 49,
-        losses: 46,
         id: 143,
         name: "Philadelphia Phillies",
       },
       home: {
-        wins: 40,
-        losses: 56,
         id: 134,
         name: "Pittsburgh Pirates",
       },
@@ -912,14 +737,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 38,
-        losses: 57,
         id: 118,
         name: "Kansas City Royals",
       },
       home: {
-        wins: 66,
-        losses: 31,
         id: 147,
         name: "New York Yankees",
       },
@@ -933,14 +754,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 38,
-        losses: 58,
         id: 116,
         name: "Detroit Tigers",
       },
       home: {
-        wins: 53,
-        losses: 43,
         id: 141,
         name: "Toronto Blue Jays",
       },
@@ -954,15 +771,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 46,
-
         id: 114,
         name: "Cleveland Guardians",
       },
       home: {
-        wins: 52,
-        losses: 43,
         id: 139,
         name: "Tampa Bay Rays",
       },
@@ -977,13 +789,9 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 53,
-        losses: 43,
         id: 158,
       },
       home: {
-        wins: 48,
-        losses: 48,
         id: 111,
         name: "Boston Red Sox",
       },
@@ -997,14 +805,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 42,
-        losses: 53,
         id: 109,
         name: "Arizona Diamondbacks",
       },
       home: {
-        wins: 58,
-        losses: 39,
         id: 144,
         name: "Atlanta Braves",
       },
@@ -1018,16 +822,11 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 51,
-        losses: 45,
         id: 136,
         name: "Seattle Mariners",
       },
 
       home: {
-        wins: 64,
-        losses: 32,
-
         id: 117,
         name: "Houston Astros",
       },
@@ -1041,16 +840,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 35,
-        losses: 63,
-
         id: 133,
         name: "Oakland Athletics",
       },
       home: {
-        wins: 48,
-        losses: 48,
-
         id: 145,
         name: "Chicago White Sox",
       },
@@ -1064,16 +857,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 64,
-        losses: 30,
-
         id: 119,
         name: "Los Angeles Dodgers",
       },
       home: {
-        wins: 43,
-        losses: 53,
-
         id: 115,
         name: "Colorado Rockies",
       },
@@ -1088,16 +875,10 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 43,
-        losses: 51,
-
         id: 140,
         name: "Texas Rangers",
       },
       home: {
-        wins: 40,
-        losses: 55,
-
         id: 108,
         name: "Los Angeles Angels",
       },
@@ -1112,16 +893,9 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 52,
-        losses: 44,
-
         id: 142,
-        name: "Minnesota Twins",
       },
       home: {
-        wins: 54,
-        losses: 43,
-
         id: 135,
         name: "San Diego Padres",
       },
@@ -1136,16 +910,10 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 38,
-        losses: 57,
-
         id: 112,
         name: "Chicago Cubs",
       },
       home: {
-        wins: 48,
-        losses: 47,
-
         id: 137,
         name: "San Francisco Giants",
       },
@@ -1159,16 +927,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 48,
-        losses: 46,
-
         id: 114,
         name: "Cleveland Guardians",
       },
       home: {
-        wins: 52,
-        losses: 43,
-
         id: 139,
         name: "Tampa Bay Rays",
       },
@@ -1183,16 +945,10 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 38,
-        losses: 57,
-
         id: 118,
         name: "Kansas City Royals",
       },
       home: {
-        wins: 66,
-        losses: 31,
-
         id: 147,
         name: "New York Yankees",
       },
@@ -1207,16 +963,10 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 38,
-        losses: 58,
-
         id: 116,
         name: "Detroit Tigers",
       },
       home: {
-        wins: 53,
-        losses: 43,
-
         id: 141,
         name: "Toronto Blue Jays",
       },
@@ -1231,16 +981,10 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 53,
-        losses: 43,
-
         id: 158,
         name: "Milwaukee Brewers",
       },
       home: {
-        wins: 48,
-        losses: 48,
-
         id: 111,
         name: "Boston Red Sox",
       },
@@ -1254,16 +998,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 59,
-        losses: 37,
-
         id: 121,
         name: "New York Mets",
       },
       home: {
-        wins: 45,
-        losses: 50,
-
         id: 146,
         name: "Miami Marlins",
       },
@@ -1277,16 +1015,11 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 47,
-        losses: 48,
-
         id: 110,
         name: "Baltimore Orioles",
       },
 
       home: {
-        wins: 36,
-
         id: 113,
         name: "Cincinnati Reds",
       },
@@ -1301,16 +1034,10 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 51,
-        losses: 45,
-
         id: 136,
         name: "Seattle Mariners",
       },
       home: {
-        wins: 64,
-        losses: 32,
-
         id: 117,
         name: "Houston Astros",
       },
@@ -1324,16 +1051,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 51,
-        losses: 46,
-
         id: 138,
         name: "St. Louis Cardinals",
       },
       home: {
-        wins: 32,
-        losses: 65,
-
         id: 120,
         name: "Washington Nationals",
       },
@@ -1348,16 +1069,9 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 52,
-        losses: 44,
-
         id: 142,
-        name: "Minnesota Twins",
       },
       home: {
-        wins: 54,
-        losses: 43,
-
         id: 135,
         name: "San Diego Padres",
       },
@@ -1371,14 +1085,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 49,
-        losses: 46,
         id: 143,
         name: "Philadelphia Phillies",
       },
       home: {
-        wins: 40,
-        losses: 56,
         id: 134,
         name: "Pittsburgh Pirates",
       },
@@ -1392,16 +1102,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 35,
-        losses: 63,
-
         id: 133,
         name: "Oakland Athletics",
       },
       home: {
-        wins: 48,
-        losses: 48,
-
         id: 145,
         name: "Chicago White Sox",
       },
@@ -1416,15 +1120,10 @@ const gameapi = [
 
     teams: {
       away: {
-        wins: 42,
-        losses: 53,
-
         id: 109,
         name: "Arizona Diamondbacks",
       },
       home: {
-        wins: 58,
-        losses: 39,
         id: 144,
         name: "Atlanta Braves",
       },
@@ -1438,16 +1137,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 64,
-        losses: 30,
-
         id: 119,
         name: "Los Angeles Dodgers",
       },
       home: {
-        wins: 43,
-        losses: 53,
-
         id: 115,
         name: "Colorado Rockies",
       },
@@ -1461,15 +1154,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 38,
-        losses: 57,
-
         id: 112,
         name: "Chicago Cubs",
       },
       home: {
-        wins: 48,
-        losses: 47,
         id: 137,
         name: "San Francisco Giants",
       },
@@ -1483,16 +1171,10 @@ const gameapi = [
     game_status: "Preview",
     teams: {
       away: {
-        wins: 43,
-        losses: 51,
-
         id: 140,
         name: "Texas Rangers",
       },
       home: {
-        wins: 40,
-        losses: 55,
-
         id: 108,
         name: "Los Angeles Angels",
       },
