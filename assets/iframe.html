@@ -1,0 +1,57 @@
+<html>
+<body>
+  <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
+  <script
+    type="text/javascript"
+    src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js" >
+  </script>
+
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js" >
+  </script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+  </script>
+
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" >
+  </script>
+
+  <script>
+    // Initialise the Zendesk JavaScript API client
+    // https://developer.zendesk.com/apps/docs/apps-v2
+    var client = ZAFClient.init();
+    client.invoke('resize', { width: '100%', height: '400px' });
+    client.on('app.registered', function(){
+      var test_title = "This is a test title";
+      var viewData = {"title": test_title};
+      var templateUrl = "./template.hbs";
+      switchView(templateUrl, viewData);
+    });
+
+    function switchView(templateUrl, viewData){
+      var target = $("#view_container");
+      $(target).empty().html("<img class='spinner' src='spinner.gif' />");
+      $.ajax(templateUrl).done(function(data){
+        var template = Handlebars.compile(data);
+        var html_data = template(viewData);
+        console.log(html_data);
+        $(target).empty().html(html_data);
+      });
+    };
+
+
+
+
+  </script>
+</body>
+  <div id="view_container">
+    <!--replace with handlebars templates-->
+    <p>This data should get replaced</p>
+  </div>
+</html>
