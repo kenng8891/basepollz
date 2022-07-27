@@ -3,8 +3,10 @@
   <li>
     <article class="game">
       <div class="title">
-        <a href="{{game.game_url}}" target="_blank">{{game.title}}</a>
-        <span>({{game.game_url}})</span>
+        <a href="{{game.game_url}}" target="_blank">{{game.team_name_home}} VS. {{game/team_name_away}}</a>
+        <p>{{game_date}}</p>
+
+
       </div>
       <div class="meta">
         {{game.vote_count}} point(s) by {{game.user.username}} on

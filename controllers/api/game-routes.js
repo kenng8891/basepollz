@@ -120,10 +120,6 @@ router.get('/:id', (req, res) => {
    'team_isWinner_away'  ],
    include:[
     {
-     model: Team,
-     attributes: ['id', 'team_id', 'team_name', 'logoPath'],
-    },
-    {
      model: Comment,
      attributes: ['id', 'comment_text', 'game_id', 'user_id', 'created_at'],
      include: {
@@ -145,40 +141,7 @@ router.get('/:id', (req, res) => {
    res.status(500).json(err);
   });
 });
-//since users don't create games, we shouldn't need this post function?
-// router.post('/', (req, res) => {
-//  // expects {title: 'Taskmaster goes public!', game_url: 'https://taskmaster.com/press', user_id: 1}
-//  if (req.session) {
-//   Game.create({
-//    title: req.body.title,
-//    game_url: req.body.game_url,
-//    user_id: req.session.user_id
-//   })
-//    .then(dbGameData => res.json(dbGameData))
-//    .catch(err => {
-//     console.log(err);
-//     res.status(500).json(err);
-//    });
-//  }
-// });
-//for updating a game info
-//need to update: gamestatus, date (incase rain), scores, isWinners
-// router.put('/:id', (req, res) => {
-//  Game.update({
-//   game_id: ,
-//   game_date:,
-//   game_status:,
-//   team_score_home:,
-//   team_score_away:,
-//   team_isWinner_home:,
-//   team_isWinner_away:,
-//  })
-//    .then(updatedGameData => res.json(updatedGameData))
-//    .catch(err => {
-//     console.log(err);
-//     res.status(500).json(err);
-//    });
-// });
+
 router.put('/upvote', (req, res) => {
  // custom static method created in models/Game.js
  if (req.session) {
@@ -190,48 +153,5 @@ router.put('/upvote', (req, res) => {
    });
  }
 });
-//don't think we need this
-// router.put('/:id', (req, res) => {
-//  Game.update(
-//   {
-//    title: req.body.title
-//   },
-//   {
-//    where: {
-//     id: req.params.id
-//    }
-//   }
-//  )
-//   .then(dbGameData => {
-//    if (!dbGameData) {
-//     res.status(404).json({ message: 'No game found with this id' });
-//     return;
-//    }
-//    res.json(dbGameData);
-//   })
-//   .catch(err => {
-//    console.log(err);
-//    res.status(500).json(err);
-//   });
-// });
-//shouldn't need delete game function either
-// router.delete('/:id', withAuth, (req, res) => {
-//  console.log('id', req.params.id);
-//  Game.destroy({
-//   where: {
-//    id: req.params.id
-//   }
-//  })
-//   .then(dbGameData => {
-//    if (!dbGameData) {
-//     res.status(404).json({ message: 'No game found with this id' });
-//     return;
-//    }
-//    res.json(dbGameData);
-//   })
-//   .catch(err => {
-//    console.log(err);
-//    res.status(500).json(err);
-//   });
-// });
+
 module.exports = router;

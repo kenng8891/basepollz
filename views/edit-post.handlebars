@@ -1,20 +1,20 @@
-<article>
+{{!-- <article>
   <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
     Edit Post
   </h2>
-  <form class="edit-post-form">
+  <form class="edit-game-form">
     <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{format_url post.post_url}})</span>
+      <input name="game-title" type="text" value="{{game.title}}" />
+      <span>({{format_url game.game_url}})</span>
     </div>
     <div>
-      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+      {{game.vote_count}} {{format_plural "point" game.vote_count}} by you on {{format_date game.created_at}}
       |
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+      <a href="/game/{{game.id}}">{{game.comments.length}} {{format_plural "comment" game.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <button type="submit">Save game</button>
+    <button type="button" class="delete-game-btn">Delete game</button>
   </form>
 </article>
 
@@ -28,8 +28,8 @@
   </div>
 </form>
 
-{{> comments post.comments}}
+{{> comments game.comments}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+<script src="/javascript/comment.js"></script> --}}

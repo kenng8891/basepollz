@@ -36,7 +36,7 @@ button:hover {
   background-color: #3486eb;
 }
 
-.post-list {
+.game-list {
   margin: 0;
   padding: 0;
 }
@@ -109,20 +109,20 @@ main {
   color: #3486eb;
 }
 
-.delete-post-btn {
+.delete-game-btn {
   background-color: #d41414;
 }
 
-.delete-post-btn:hover {
+.delete-game-btn:hover {
   background-color: #ff643d;
 }
 
-.post {
+.game {
   margin-bottom: 2%;
   line-height: 150%;
 }
 
-.post .title span {
+.game .title span {
   font-style: italic;
   font-size: 90%;
   color: #7d7d7d;
@@ -161,11 +161,11 @@ main {
   opacity: .6;
 }
 
-.new-post-form input {
+.new-game-form input {
   width: 300px;
 }
 
-.edit-post-form {
+.edit-game-form {
   margin-bottom: 5%;
 }
 
