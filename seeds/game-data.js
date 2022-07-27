@@ -3,10 +3,9 @@ const { Gamedata } = require("../models");
 const gameapi = [
   {
     gameid: 1,
-    gamePk: 661064,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661064,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 40,
@@ -25,10 +24,9 @@ const gameapi = [
 
   {
     gameid: 2,
-    gamePk: 663029,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663029,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 45,
@@ -47,10 +45,9 @@ const gameapi = [
 
   {
     gameid: 3,
-    gamePk: 661054,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661054,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 52,
@@ -69,10 +66,9 @@ const gameapi = [
 
   {
     gameid: 4,
-    gamePk: 661563,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661563,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 58,
@@ -91,10 +87,9 @@ const gameapi = [
 
   {
     gameid: 5,
-    gamePk: 661716,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661716,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 51,
@@ -114,10 +109,9 @@ const gameapi = [
 
   {
     gameid: 6,
-    gamePk: 663203,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663203,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -137,10 +131,9 @@ const gameapi = [
 
   {
     gameid: 7,
-    gamePk: 662813,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662813,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 54,
@@ -158,10 +151,9 @@ const gameapi = [
 
   {
     gameid: 8,
-    gamePk: 662438,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662438,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 66,
@@ -180,10 +172,9 @@ const gameapi = [
 
   {
     gameid: 9,
-    gamePk: 662653,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662653,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 40,
@@ -202,10 +193,9 @@ const gameapi = [
 
   {
     gameid: 10,
-    gamePk: 661281,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661281,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 52,
@@ -224,10 +214,9 @@ const gameapi = [
 
   {
     gameid: 11,
-    gamePk: 661079,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661079,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -246,10 +235,9 @@ const gameapi = [
 
   {
     gameid: 12,
-    gamePk: 662346,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662346,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 64,
@@ -268,10 +256,9 @@ const gameapi = [
 
   {
     gameid: 13,
-    gamePk: 663314,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663314,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -290,10 +277,9 @@ const gameapi = [
 
   {
     gameid: 14,
-    gamePk: 662573,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662573,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 32,
@@ -312,10 +298,9 @@ const gameapi = [
 
   {
     gameid: 15,
-    gamePk: 662184,
-    officialDate: "2022-07-26",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662184,
+    game_date: "2022-07-26",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 43,
@@ -334,10 +319,9 @@ const gameapi = [
 
   {
     gameid: 16,
-    gamePk: 661554,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661554,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 58,
@@ -356,10 +340,9 @@ const gameapi = [
 
   {
     gameid: 17,
-    gamePk: 662900,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662900,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 54,
@@ -378,10 +361,9 @@ const gameapi = [
 
   {
     gameid: 18,
-    gamePk: 662652,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662652,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 40,
@@ -400,10 +382,9 @@ const gameapi = [
 
   {
     gameid: 19,
-    gamePk: 661249,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661249,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 52,
@@ -422,10 +403,9 @@ const gameapi = [
 
   {
     gameid: 20,
-    gamePk: 662565,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662565,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 32,
@@ -444,10 +424,9 @@ const gameapi = [
 
   {
     gameid: 21,
-    gamePk: 661078,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661078,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -466,10 +445,9 @@ const gameapi = [
 
   {
     gameid: 22,
-    gamePk: 662345,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662345,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 64,
@@ -488,10 +466,9 @@ const gameapi = [
 
   {
     gameid: 23,
-    gamePk: 663294,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663294,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -510,10 +487,9 @@ const gameapi = [
 
   {
     gameid: 24,
-    gamePk: 662165,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662165,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 43,
@@ -532,10 +508,9 @@ const gameapi = [
 
   {
     gameid: 25,
-    gamePk: 663028,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663028,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 45,
@@ -554,10 +529,9 @@ const gameapi = [
 
   {
     gameid: 26,
-    gamePk: 661053,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661053,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 52,
@@ -576,10 +550,9 @@ const gameapi = [
 
   {
     gameid: 27,
-    gamePk: 661715,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661715,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 51,
@@ -598,10 +571,9 @@ const gameapi = [
 
   {
     gameid: 28,
-    gamePk: 663191,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663191,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -620,10 +592,9 @@ const gameapi = [
 
   {
     gameid: 29,
-    gamePk: 662420,
-    officialDate: "2022-07-27",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662420,
+    game_date: "2022-07-27",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 66,
@@ -642,10 +613,9 @@ const gameapi = [
 
   {
     gameid: 30,
-    gamePk: 661052,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661052,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 52,
@@ -664,10 +634,9 @@ const gameapi = [
 
   {
     gameid: 31,
-    gamePk: 663027,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663027,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 45,
@@ -686,10 +655,9 @@ const gameapi = [
 
   {
     gameid: 32,
-    gamePk: 662326,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662326,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 49,
@@ -708,10 +676,9 @@ const gameapi = [
 
   {
     gameid: 33,
-    gamePk: 661257,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661257,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 38,
@@ -730,10 +697,9 @@ const gameapi = [
 
   {
     gameid: 34,
-    gamePk: 661714,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661714,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 38,
@@ -752,10 +718,9 @@ const gameapi = [
 
   {
     gameid: 35,
-    gamePk: 663200,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663200,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -774,10 +739,9 @@ const gameapi = [
 
   {
     gameid: 36,
-    gamePk: 662907,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662907,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 51,
@@ -796,10 +760,9 @@ const gameapi = [
 
   {
     gameid: 37,
-    gamePk: 661077,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661077,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 64,
@@ -818,10 +781,9 @@ const gameapi = [
 
   {
     gameid: 38,
-    gamePk: 663380,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663380,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 43,
@@ -840,10 +802,9 @@ const gameapi = [
 
   {
     gameid: 39,
-    gamePk: 662058,
-    officialDate: "2022-07-28",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662058,
+    game_date: "2022-07-28",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 38,
@@ -862,10 +823,9 @@ const gameapi = [
 
   {
     gameid: 40,
-    gamePk: 663026,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663026,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 47,
@@ -884,10 +844,9 @@ const gameapi = [
 
   {
     gameid: 41,
-    gamePk: 661372,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661372,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 59,
@@ -906,10 +865,9 @@ const gameapi = [
 
   {
     gameid: 42,
-    gamePk: 662477,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662477,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 51,
@@ -928,10 +886,9 @@ const gameapi = [
 
   {
     gameid: 43,
-    gamePk: 662435,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662435,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 49,
@@ -950,10 +907,9 @@ const gameapi = [
 
   {
     gameid: 44,
-    gamePk: 661256,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661256,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 38,
@@ -972,10 +928,9 @@ const gameapi = [
 
   {
     gameid: 45,
-    gamePk: 661713,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661713,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 38,
@@ -994,10 +949,9 @@ const gameapi = [
 
   {
     gameid: 46,
-    gamePk: 661871,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661871,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -1017,10 +971,9 @@ const gameapi = [
 
   {
     gameid: 47,
-    gamePk: 663190,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663190,
+    game_date: "2022-07-29",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1039,10 +992,9 @@ const gameapi = [
 
   {
     gameid: 48,
-    gamePk: 661501,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661501,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 42,
@@ -1061,10 +1013,9 @@ const gameapi = [
 
   {
     gameid: 49,
-    gamePk: 662745,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662745,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 51,
@@ -1085,10 +1036,9 @@ const gameapi = [
 
   {
     gameid: 50,
-    gamePk: 661406,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661406,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 35,
@@ -1109,10 +1059,9 @@ const gameapi = [
 
   {
     gameid: 51,
-    gamePk: 661076,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661076,
+    game_date: "2022-07-29",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 64,
@@ -1133,10 +1082,9 @@ const gameapi = [
 
   {
     gameid: 52,
-    gamePk: 663379,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663379,
+    game_date: "2022-07-29",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1158,10 +1106,9 @@ const gameapi = [
 
   {
     gameid: 53,
-    gamePk: 662268,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662268,
+    game_date: "2022-07-29",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1183,10 +1130,9 @@ const gameapi = [
 
   {
     gameid: 54,
-    gamePk: 662057,
-    officialDate: "2022-07-29",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662057,
+    game_date: "2022-07-29",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1208,10 +1154,9 @@ const gameapi = [
 
   {
     gameid: 55,
-    gamePk: 661870,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661870,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 48,
@@ -1232,10 +1177,9 @@ const gameapi = [
 
   {
     gameid: 56,
-    gamePk: 661255,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661255,
+    game_date: "2022-07-30",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1257,10 +1201,9 @@ const gameapi = [
 
   {
     gameid: 57,
-    gamePk: 661712,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661712,
+    game_date: "2022-07-30",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1282,10 +1225,9 @@ const gameapi = [
 
   {
     gameid: 58,
-    gamePk: 663192,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663192,
+    game_date: "2022-07-30",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1307,10 +1249,9 @@ const gameapi = [
 
   {
     gameid: 59,
-    gamePk: 661371,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661371,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 59,
@@ -1331,10 +1272,9 @@ const gameapi = [
 
   {
     gameid: 60,
-    gamePk: 663025,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663025,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 47,
@@ -1355,10 +1295,9 @@ const gameapi = [
 
   {
     gameid: 61,
-    gamePk: 662738,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662738,
+    game_date: "2022-07-30",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1380,10 +1319,9 @@ const gameapi = [
 
   {
     gameid: 62,
-    gamePk: 662476,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662476,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 51,
@@ -1404,10 +1342,9 @@ const gameapi = [
 
   {
     gameid: 63,
-    gamePk: 662196,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662196,
+    game_date: "2022-07-30",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1429,10 +1366,9 @@ const gameapi = [
 
   {
     gameid: 64,
-    gamePk: 662415,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662415,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 49,
@@ -1451,10 +1387,9 @@ const gameapi = [
 
   {
     gameid: 65,
-    gamePk: 661451,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661451,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 35,
@@ -1475,10 +1410,9 @@ const gameapi = [
 
   {
     gameid: 66,
-    gamePk: 661499,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 661499,
+    game_date: "2022-07-30",
+    game_status: "Preview",
 
     teams: {
       away: {
@@ -1499,10 +1433,9 @@ const gameapi = [
 
   {
     gameid: 67,
-    gamePk: 662989,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662989,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 64,
@@ -1523,10 +1456,9 @@ const gameapi = [
 
   {
     gameid: 68,
-    gamePk: 662112,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 662112,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 38,
@@ -1546,10 +1478,9 @@ const gameapi = [
 
   {
     gameid: 69,
-    gamePk: 663378,
-    officialDate: "2022-07-30",
-    abstractGameState: "Preview",
-    abstractGameCode: "P",
+    game_id: 663378,
+    game_date: "2022-07-30",
+    game_status: "Preview",
     teams: {
       away: {
         wins: 43,

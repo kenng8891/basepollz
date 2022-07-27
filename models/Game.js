@@ -53,58 +53,62 @@ Game.init(
     // },
     game_date: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
+      allowNull: true,
     },
     game_id: { 
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       unique: true,
       primarykey: true
     },
     team_id_home:{
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       unique: true,
     },
     team_name_home: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true
     },
     team_id_away:{
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       unique: true,
     },
     team_logoPath_home: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     team_logoPath_away: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
     },
     team_name_away:{
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: true,
     },
     game_status:{
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
       //SHOULD THIS BE A LIMITED SERIES OF CHOICES? 'PREVIEW', 'LIVE', AND 'FINAL'?
     },
     team_score_home:{
       type: DataTypes.INTEGER,
+      allowNull: true
     },
     team_score_away:{
       type: DataTypes.INTEGER,
+      allowNull: true
     },
     team_isWinner_home: {
       type: DataTypes.BOOLEAN,
+      allowNull: true
     },
     team_isWinner_away: {
       type: DataTypes.BOOLEAN,
+      allowNull: true
     },
     //If we keep track of all user's votes, that would go below.
     // home_userVotes: {

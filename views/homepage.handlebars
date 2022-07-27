@@ -1,16 +1,16 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
+<ol class="game-list">
+  {{#each games as |game|}}
   <li>
-    <article class="post">
+    <article class="game">
       <div class="title">
-        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-        <span>({{post.post_url}})</span>
+        <a href="{{game.game_url}}" target="_blank">{{game.title}}</a>
+        <span>({{game.game_url}})</span>
       </div>
       <div class="meta">
-        {{post.vote_count}} point(s) by {{post.user.username}} on
-        {{post.created_at}}
+        {{game.vote_count}} point(s) by {{game.user.username}} on
+        {{game.created_at}}
         |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+        <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
       </div>
     </article>
   </li>
