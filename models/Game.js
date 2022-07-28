@@ -87,14 +87,6 @@ Game.init(
       allowNull: true,
       //unique: true,
     },
-    team_home_logo: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    team_away_logo: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
     team_name_away: {
       type: DataTypes.STRING,
       allowNull: true,

@@ -6,10 +6,10 @@
       <ul class="game-list border border-4 p2 mb2 rounded">
         <h2>Upcoming Games</h2>
         {{#each gamesFuture as |game|}}
-        <li>
+        <li class = "currentgames">
           <article class ='game-card'>
             <div class="title">
-              <a href="/game/{{game.id}}" >{{game.team_name_home}} VS. {{game/team_name_away}}</a>
+              <a href="/game/{{game.id}}" >{{game.team_name_home}} <img src = "http://www.capsinfo.com/images/MLB_Team_Logos/TampaBay_Rays.png">  VS. {{game/team_name_away}} <img src = "http://www.capsinfo.com/images/MLB_Team_Logos/Miami_Marlins.png"> </a>
             <div class="meta">
               {{vote_count}} {{format_plural "point" vote_count}} by {{game.user.username}} on
               {{game.created_at}}
@@ -30,15 +30,15 @@
       </ul>
     </div>
 
-    <div class="col-12 col-sm-12 col-md-4 col-lg-4 border-left">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 border-left text-danger">
       {{!-- Live/Over Games List --}}
       <ul class="game-list border border-4 p2 mb2 rounded">
         <h2>Live and Final Games</h2>
         {{#each gamesPast as |game|}}
-        <li>
+        <li class = "postgames">
           <article class ='game-card'>
             <div class="title">
-              <a href="/game/{{game.id}}" >{{game.team_name_home}} VS. {{game/team_name_away}}</a>
+             <a href="/game/{{game.id}}" >{{game.team_name_home}} VS. {{game/team_name_away}}</a>
               <span>Game date: {{game_date}}</span>
             </div>
             <div class="scores"> 
@@ -49,11 +49,11 @@
              <br><div class="game-card-win">
                 {{#if game.team_isWinner_home}}
               {{!-- display home team logo here --}}
-              The {{team_name_home}} {{team_home_logo}} won!!
+              The {{team_name_home}} <img src ="http://www.capsinfo.com/images/MLB_Team_Logos/SanDiego_Padres.png"> won!!
               {{/if}}
               {{!-- display away team logo here--}}
               {{#if game.team_isWinner_away}}
-              The {{team_name_away}} <img src="{{team_away_logo}}"> won!!
+              The {{team_name_away}} <img src ="http://www.capsinfo.com/images/MLB_Team_Logos/Detroit_Tigers.png"> won!!
               {{/if}}
             </div>
             </div>
