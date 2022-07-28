@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
           attributes: ['username']
         }
       },
-    ],
+    ]
   })
     .then(dbGameData => {
       const games= dbGameData.map(game => game.get({ plain: true }));
