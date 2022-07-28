@@ -10,8 +10,6 @@
           <article class ='game-card'>
             <div class="title">
               <a href="/game/{{game.id}}" >{{game.team_name_home}} VS. {{game/team_name_away}}</a>
-              <div>{{game_date}}</div>
-            </div>
             <div class="meta">
               {{vote_count}} {{format_plural "point" vote_count}} by {{game.user.username}} on
               {{game.created_at}}
@@ -51,11 +49,11 @@
              <br><div class="game-card-win">
                 {{#if game.team_isWinner_home}}
               {{!-- display home team logo here --}}
-              The {{team_name_home}} won!!
+              The {{team_name_home}} {{team_home_logo}} won!!
               {{/if}}
               {{!-- display away team logo here--}}
               {{#if game.team_isWinner_away}}
-              The {{team_name_away}} won!!
+              The {{team_name_away}} <img src="{{team_away_logo}}"> won!!
               {{/if}}
             </div>
             </div>
