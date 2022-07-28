@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
           attributes: ['username']
         }
       },
-    ],
+    ]
   })
     .then(dbGameData => {
       const games= dbGameData.map(game => game.get({ plain: true }));
@@ -50,26 +50,11 @@ router.get('/', (req, res) => {
       console.log('***********************************')
       console.log(gamesFuture);
 
-      let gamesFuture = []
-      let gamesPast = []
-
-      for(i = 0; i < games.length; i++) {
-        if (games[i].game_status === "Preview" ) {
-          gamesFuture.push(games[i]);
-        } else {
-          gamesPast.push(games[i]);
-        }
-      }
-
       res.render('homepage', {
         gamesFuture,
         gamesPast,
-<<<<<<< HEAD
-        loggedIn: req.session.loggedIn
-=======
         loggedIn: req.session.loggedIn,
 
->>>>>>> b1ecc819fca21fdbbd5e2d94083583f0e4e8bbfd
       });
     })
     .catch(err => {
