@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Game, User, Comment, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
-const fetchGameData = require('../../public/javascript/fetch-data')
+//const fetchGameData = require('../../public/javascript/fetch-data')
 // get all upcoming games
 router.get('/', (req, res) => {
  Game.findAll({
@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
    'id',
    'game_id',
    'game_date',
+  //  'liveFeedLink',
    'game_status',
    'team_name_home',
    'team_name_away',
@@ -19,7 +20,7 @@ router.get('/', (req, res) => {
    'team_score_away',
    'team_isWinner_home',
    'team_isWinner_away'
-   //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
+   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)'), 'vote_count']
   ],
  })
   .then(dbGameData => res.json(dbGameData))
@@ -36,11 +37,12 @@ router.get('/voteable', (req, res) => {
    'game_id',
    'game_date',
    'game_status',
+   //'liveFeedLink',
    'team_name_home',
    'team_name_away',
    'team_id_home',
    'team_id_away',
-   //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
+   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)'), 'vote_count']
   ],
   include:[
    {
@@ -70,6 +72,7 @@ router.get('/nonvoteable', (req, res) => {
    'game_id',
    'game_date',
    'game_status',
+  //  'liveFeedLink',
    'team_name_home',
    'team_name_away',
    'team_id_home',
@@ -78,7 +81,7 @@ router.get('/nonvoteable', (req, res) => {
    'team_score_away',
    'team_isWinner_home',
    'team_isWinner_away'
-   //[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
+   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
   ],
   include:[
    {
@@ -110,6 +113,7 @@ router.get('/:id', (req, res) => {
    'game_id',
    'game_date',
    'game_status',
+  //  'liveFeedLink',
    'team_name_home',
    'team_name_away',
    'team_id_home',

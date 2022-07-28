@@ -3,39 +3,36 @@ const sequelize = require('../config/connection');
 // create our game model
 class Game extends Model {
 
-  //do not delete: let's figure out voting after we 
-
-  // static upvote(body, models) {
-  //   return models.Vote.create({
-  //     user_id: body.user_id,
-  //     game_id: body.game_id
-  //   }).then(() => {
-  //     return Game.findOne({
-  //       where: {
-  //         id: body.game_id
-  //       },
-  //       attributes: [
-  //         'id',
-  //         'team_home',
-  //         'team_away',
-  //         'score_home',
-  //         'score_away',
-  //         'game_status',
-  //         [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
-  //       ],
-  //       include: [
-  //         {
-  //           model: models.Comment,
-  //           attributes: ['id', 'comment_text', 'game_id', 'user_id', 'created_at'],
-  //           include: {
-  //             model: models.User,
-  //             attributes: ['username']
-  //           }
-  //         }
-  //       ]
-  //     });
-  //   });
-  // }
+  static upvote(body, models) {
+    return models.Vote.create({
+      user_id: body.user_id,
+      game_id: body.game_id
+    }).then(() => {
+      return Game.findOne({
+        where: {
+          id: body.game_id
+        },
+        attributes: [
+          'game_date',
+          'game_id',
+          'team_name_home',
+          'team_name_away',
+          'game_status',
+          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
+        ],
+        include: [
+          {
+            model: models.Comment,
+            attributes: ['id', 'comment_text', 'game_id', 'user_id', 'created_at'],
+            include: {
+              model: models.User,
+              attributes: ['username']
+            }
+          }
+        ]
+      });
+    });
+  }
 }
 
 // create fields/columns for game model
@@ -61,6 +58,10 @@ Game.init(
       unique: true,
       primarykey: true
     },
+  //   liveFeedLink: {
+  //     type: DataTypes.STRING,
+  //     allowNull: true,
+  // },
     team_id_home:{
       type: DataTypes.INTEGER,
       allowNull: true,
@@ -94,7 +95,6 @@ Game.init(
     game_status:{
       type: DataTypes.STRING,
       allowNull: true
-      //SHOULD THIS BE A LIMITED SERIES OF CHOICES? 'PREVIEW', 'LIVE', AND 'FINAL'?
     },
     team_score_home:{
       type: DataTypes.INTEGER,

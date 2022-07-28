@@ -78,12 +78,14 @@ header {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  
   padding: 0 1%;
 }
 
 header h1 {
-  font-size: 1em;
+  text-align: center;
+  font-size: 3em;
+  
 }
 
 main {
@@ -101,7 +103,7 @@ main {
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
-  margin-left: 16px;
+  /* margin-left: 16px; */
 }
 
 .btn-no-style:hover {
@@ -117,16 +119,22 @@ main {
   background-color: #ff643d;
 }
 
-.game {
+.game-card {
   margin-bottom: 2%;
   line-height: 150%;
+  border: 5px solid rgb(0, 0, 0);
+  font-weight: bold;
 }
 
-.game .title span {
+.game-card-win {
+  border: 2px solid rgb(0, 225, 75);
+}
+
+/* .game .title span {
   font-style: italic;
   font-size: 90%;
   color: #7d7d7d;
-}
+} */
 
 .edit-link {
   display: block;
@@ -175,4 +183,9 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+nav {
+  text-align: end;
+  justify-content: space-between;
 }

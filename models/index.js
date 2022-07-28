@@ -21,23 +21,23 @@ const Comment = require("./Comment");
 //   foreignKey: 'game_id',
 //   onDelete: 'SET NULL'
 // });
-// Vote.belongsTo(User, {
-//   foreignKey: 'user_id',
-//   onDelete: 'SET NULL'
-// });
+Vote.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
 
-// Vote.belongsTo(Game, {
-//   foreignKey: 'game_id',
-//   onDelete: 'SET NULL'
-// });
+Vote.belongsTo(Game, {
+  foreignKey: 'game_id',
+  onDelete: 'SET NULL'
+});
 
-// User.hasMany(Vote, {
-//   foreignKey: 'user_id'
-// });
+User.hasMany(Vote, {
+  foreignKey: 'user_id'
+});
 
-// Game.hasMany(Vote, {
-//   foreignKey: 'game_id'
-// });
+Game.hasMany(Vote, {
+  foreignKey: 'game_id'
+});
 
 // Users and comments
 User.hasMany(Comment, {

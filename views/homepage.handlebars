@@ -2,49 +2,77 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-8 col-lg-8 border-bottom">
-      <ol class="game-list">
+      {{!-- Upcoming Games List --}}
+      <ul class="game-list border border-4 p2 mb2 rounded">
+        <h2>Upcoming Games</h2>
         {{#each gamesFuture as |game|}}
         <li>
-          <article class ='game'>
+          <article class ='game-card'>
             <div class="title">
-              <a href="{{game.game_url}}" target="_blank">{{game.team_name_home}} VS. {{game/team_name_away}}</a>
-              <span>({{game_date}})</span>
+              <a href="/game/{{game.id}}" >{{game.team_name_home}} VS. {{game/team_name_away}}</a>
+              <div>{{game_date}}</div>
             </div>
             <div class="meta">
-              {{game.vote_count}} point(s) by {{game.user.username}} on
+              {{vote_count}} {{format_plural "point" vote_count}} by {{game.user.username}} on
               {{game.created_at}}
               |
               <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
             </div>
+            <br>
+            <h6>Who do you think will win?</h6>
+            <div>
+              <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
+    <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button>
+            </div>
           </article>
         </li>
         {{/each}}
-      </ol>
+      </ul>
     </div>
 
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 border-left">
-
-      <ol class="game-list">
+      {{!-- Live/Over Games List --}}
+      <ul class="game-list border border-4 p2 mb2 rounded">
+        <h2>Live and Final Games</h2>
         {{#each gamesPast as |game|}}
         <li>
-          <article class ='game'>
+          <article class ='game-card'>
             <div class="title">
-              <a href="{{game.game_url}}" target="_blank">{{game.team_name_home}} VS. {{game/team_name_away}}</a>
-              <span>({{game_date}})</span>
+              <a href="/game/{{game.id}}" >{{game.team_name_home}} VS. {{game/team_name_away}}</a>
+              <span>Game date: {{game_date}}</span>
+            </div>
+            <div class="scores"> 
+              {{game.team_name_home}} Score: {{game.team_score_home}}
+              {{game.team_name_away}} Score: {{game.team_score_away}}
+              <br><div class="game-card-win">
+                {{#if game.team_isWinner_home}}
+              {{!-- display home team logo here --}}
+              The {{team_name_home}} won!!
+              {{/if}}
+              {{!-- display away team logo here--}}
+              {{#if game.team_isWinner_away}}
+              The {{team_name_away}} won!!
+              {{/if}}
+            </div>
             </div>
             <div class="meta">
-              {{game.vote_count}} point(s) by {{game.user.username}} on
-              {{game.created_at}}
+              {{!-- I don't think we need the votes for past games! --}}
+              {{!-- {{game.vote_count}} point(s) by {{game.user.username}} on
+              {{game.created_at}} --}}
               |
               <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
             </div>
           </article>
         </li>
         {{/each}}
-      </ol>
+      </ul>
 
 
     </div>
 
   </div>
 </div>
+{{#if loggedIn}}
+
+<script src="/javascript/upvote.js"></script>
+{{/if}}
