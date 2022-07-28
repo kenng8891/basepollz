@@ -21,6 +21,8 @@
             <br>
             <h6>Who do you think will win?</h6>
             <div>
+              {{!-- i don't think either of these buttons work yet! Upvote.js is connect but only set
+              up to "upvote" a game, rather than vote on a team --}}
               <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
     <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button>
             </div>
@@ -44,7 +46,9 @@
             <div class="scores"> 
               {{game.team_name_home}} Score: {{game.team_score_home}}
               {{game.team_name_away}} Score: {{game.team_score_away}}
-              <br><div class="game-card-win">
+             {{!-- here's an "if" statement for showing the winning
+            team - the game-card-win class in the stylesheet gives it a green border --}}
+             <br><div class="game-card-win">
                 {{#if game.team_isWinner_home}}
               {{!-- display home team logo here --}}
               The {{team_name_home}} won!!
