@@ -1,6 +1,6 @@
 <article class="game">
   <div class="title">
-    <a href="{{game.game_url}}" target="_blank">{{game.title}}</a>
+    <a href="{{game.game_url}}" target="_blank">{{game.team_name_home}} VS. {{game/team_name_away}}</a>
     <span>({{game.game_url}})</span>
   </div>
   <div class="meta">
@@ -19,7 +19,8 @@
 
   <div>
     <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+    <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
+    <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button>
   </div>
 </form>
 {{/if}}

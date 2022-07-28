@@ -2,32 +2,38 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  color: rgb(50, 23, 106);
+  background-image: url(https://m.media-amazon.com/images/I/61389VEtr4L._AC_SL1000_.jpg);
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: white;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
+  size: 60%;
 }
 
-a:hover {
-  color: #3486eb;
+a:link,
+a:visited {
+  color: white;
 }
 
 button {
-  background-color: #225ca3;
+  background-color: green;
   border: 0;
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -41,13 +47,15 @@ button:hover {
   padding: 0;
 }
 
-textarea, input {
-  padding: .5%;
+textarea,
+input {
+  padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid #3486eb;
 }
@@ -59,6 +67,7 @@ textarea {
 
 form > div {
   margin-bottom: 2%;
+  margin: 20%;
 }
 
 form label {
@@ -78,12 +87,13 @@ header {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   padding: 0 1%;
 }
 
 header h1 {
-  font-size: 1em;
+  text-align: center;
+  font-size: 3em;
 }
 
 main {
@@ -97,36 +107,34 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: #500277;
   font-size: 100%;
   font-weight: bold;
-  transition: color .1s;
-  margin-left: 16px;
+  transition: color 0.1s;
+  /* margin-left: 16px; */
 }
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: #500277;
 }
 
-.delete-game-btn {
-  background-color: #d41414;
-}
-
-.delete-game-btn:hover {
-  background-color: #ff643d;
-}
-
-.game {
+.game-card {
   margin-bottom: 2%;
   line-height: 150%;
+  border: 5px solid rgb(0, 0, 0);
+  font-weight: bold;
 }
 
-.game .title span {
+.game-card-win {
+  border: 2px solid rgb(0, 225, 75);
+}
+
+/* .game .title span {
   font-style: italic;
   font-size: 90%;
   color: #7d7d7d;
-}
+} */
 
 .edit-link {
   display: block;
@@ -135,7 +143,7 @@ main {
 
 .upvote-btn {
   background-color: #197d0f;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 }
 
 .upvote-btn:hover {
@@ -157,8 +165,8 @@ main {
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
 .new-game-form input {
@@ -175,4 +183,39 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+nav {
+  text-align: end;
+  justify-content: space-between;
+}
+
+.flex-container {
+  display: flex;
+  margin: 50px;
+}
+
+.login-form {
+  margin: 100px;
+}
+
+h2 {
+  color: white;
+}
+
+h6 {
+  color: white;
+}
+
+img {
+  width: 20%;
+  height: 50%;
+}
+
+meta {
+  color: white;
+}
+
+.postgames {
+  background-color: black;
 }

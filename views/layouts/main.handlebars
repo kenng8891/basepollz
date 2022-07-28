@@ -13,14 +13,16 @@
   <div class="wrapper">
     <header>
       <h1>
+        <img src ="/../../public/logo-files/_default_logo.png" alt="logo"/>
         <a href="/">Basepollz</a>
       </h1>
       <nav>
+        <a href="/">Home</a>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
@@ -37,5 +39,5 @@
   {{/if}}
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="././public/javascript/fetch-data.js"></script>
+{{!-- <script src="././public/javascript/fetch-data.js"></script> --}}
 </html>

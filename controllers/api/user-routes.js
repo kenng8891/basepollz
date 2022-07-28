@@ -25,12 +25,12 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'comment_text', 'created_at'],
         include: {
           model: Game,
-          attributes: ['title']
+          attributes: ['game_id', 'team_name_home', 'team_name_away']
         }
       },
       {
         model: Game,
-        attributes: ['title'],
+        attributes: ['game_id'],
         through: Vote,
         as: 'voted_games'
       }

@@ -14,7 +14,7 @@ router.get("/", withAuth, (req, res) => {
   console.log("======================");
   Game.findAll({
     where: {
-      user_id: req.session.user_id,
+      user_id: req.session.id,
     },
     attributes: [
       'id',
@@ -31,7 +31,7 @@ router.get("/", withAuth, (req, res) => {
       'team_isWinner_away',
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+          "(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)"
         ),
         "vote_count",
       ],
@@ -49,7 +49,9 @@ router.get("/", withAuth, (req, res) => {
   })
     .then((dbGameData) => {
       const games = dbGameData.map((game) => game.get({ plain: true }));
-      res.render("dashboard", { games, loggedIn: true });
+      res.render("dashboard", { 
+        games, 
+        loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
@@ -64,6 +66,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
       'game_id',
       'game_date',
       'game_status',
+      // 'liveFeedLink',
       'team_name_home',
       'team_name_away',
       'team_id_home',
@@ -74,7 +77,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
       'team_isWinner_away',
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+          "(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)"
         ),
         "vote_count",
       ],
@@ -94,10 +97,10 @@ router.get("/edit/:id", withAuth, (req, res) => {
       if (dbGameData) {
         const game = dbGameData.get({ plain: true });
 
-        res.render("edit-game", {
-          game,
-          loggedIn: true,
-        });
+        // res.render("edit-game", {
+        //   game,
+        //   loggedIn: true,
+        // });
       } else {
         res.status(404).end();
       }

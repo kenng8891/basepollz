@@ -21,7 +21,7 @@ Vote.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'game',
-        key: 'id'
+        key: 'game_id'
       }
     }
   },

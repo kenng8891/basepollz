@@ -1,29 +1,29 @@
-// const { Game } = require("../models");
+// const { Team } = require("../models");
 
 // const teamData = [
 //   {
 //     team_id: 1,
 //     teamName: "Houston Astros",
 //     teamID: 117,
-//     logoPath: "../public/logo-files/Houston_Astros.png",
+//     logoPath: "./public/logo-files/Houston_Astros.png",
 //   },
 //   {
 //     id: 2,
 //     teamID: 138,
 //     teamName: "St. Louis Cardinals",
-//     logoPath: "../public/logo-files/StLous_Cardinals.png",
+//     logoPath: "./public/logo-files/StLous_Cardinals.png",
 //   },
 //   {
 //     id: 3,
 //     teamID: 110,
 //     teamName: "Baltimore Orioles",
-//     logoPath: "../public/logo-files/Baltimore_Orioles.png",
+//     logoPath: "./public/logo-files/Baltimore_Orioles.png",
 //   },
 //   {
 //     id: 4,
 //     teamID: 143,
 //     teamName: "Philadelphia Phillies",
-//     logoPath: "../public/logo-files/Philadelphia_Phillies.png",
+//     logoPath: "./public/logo-files/Philadelphia_Phillies.png",
 //   },
 //   {
 //     id: 5,
@@ -149,37 +149,37 @@
 //     id: 25,
 //     teamID: 120,
 //     teamName: "Washington Nationals",
-//     logoPath: "../public/logo-files/Washington_Nationals.png"
+//     logoPath: "../public/logo-files/Washington_Nationals.png",
 //   },
 //   {
 //     id: 26,
 //     teamID: 111,
 //     teamName: "Boston Red Sox",
-//     logoPath: "../public/logo-files/Boston_Redsox.png"
+//     logoPath: "../public/logo-files/Boston_Redsox.png",
 //   },
 //   {
 //     id: 27,
 //     teamID: 134,
 //     teamName: "Pittsburgh Pirates",
-//     logoPath: "../public/logo-files/Pittsburgh_Pirates.png"
+//     logoPath: "../public/logo-files/Pittsburgh_Pirates.png",
 //   },
 //   {
 //     id: 28,
 //     teamID: 142,
 //     teamName: "Minnesota Twins",
-//     logoPath: "../public/logo-files/Minnesota_Twins.png"
+//     logoPath: "../public/logo-files/Minnesota_Twins.png",
 //   },
 //   {
 //     id: 29,
 //     teamID: 115,
 //     teamName: "Colorado Rockies",
-//     logoPath: "../public/logo-files/Colorado_Rockies.png"
+//     logoPath: "../public/logo-files/Colorado_Rockies.png",
 //   },
 //   {
 //     id: 30,
 //     teamID: 121,
 //     teamName: "New York Mets",
-//     logoPath: "../public/logo-files/NewYork_Mets.png"
+//     logoPath: "http://www.capsinfo.com/images/MLB_Team_Logos/NewYork_Mets.png",
 //   },
 // ];
 

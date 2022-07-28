@@ -3,7 +3,7 @@ const Game = require("./Game");
 const User = require("./User");
 const Vote = require("./Vote");
 const Comment = require("./Comment");
-
+const Logo = require("./Logo");
 // create associations
 
 //ADD ALL THESE BACK IN WHEN WE ADD VOTING
@@ -21,23 +21,23 @@ const Comment = require("./Comment");
 //   foreignKey: 'game_id',
 //   onDelete: 'SET NULL'
 // });
-// Vote.belongsTo(User, {
-//   foreignKey: 'user_id',
-//   onDelete: 'SET NULL'
-// });
+Vote.belongsTo(User, {
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
+});
 
-// Vote.belongsTo(Game, {
-//   foreignKey: 'game_id',
-//   onDelete: 'SET NULL'
-// });
+Vote.belongsTo(Game, {
+  foreignKey: "game_id",
+  onDelete: "SET NULL",
+});
 
-// User.hasMany(Vote, {
-//   foreignKey: 'user_id'
-// });
+User.hasMany(Vote, {
+  foreignKey: "user_id",
+});
 
-// Game.hasMany(Vote, {
-//   foreignKey: 'game_id'
-// });
+Game.hasMany(Vote, {
+  foreignKey: "game_id",
+});
 
 // Users and comments
 User.hasMany(Comment, {
@@ -56,5 +56,9 @@ Game.hasMany(Comment, {
 Comment.belongsTo(Game, {
   foreignKey: "game_id",
 });
+
+// Logo.belongsTo(Game, {
+//   foreignKey: "team_id",
+// });
 
 module.exports = { User, Game, Vote, Comment };

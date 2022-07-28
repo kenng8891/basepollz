@@ -39,6 +39,7 @@ function getApi() {
           allGames.push({
             game_date: datesObj[i].date,
             game_id: datesObj[i].games[y].gamePk,
+           // liveFeedLink: datesObj[i].games[y].link,
             team_name_home: datesObj[i].games[y].teams.home.team.name,
             team_name_away: datesObj[i].games[y].teams.away.team.name,
             team_id_home: datesObj[i].games[y].teams.home.team.id,
