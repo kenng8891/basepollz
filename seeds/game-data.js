@@ -2,15 +2,10 @@ const { Game } = require("../models");
 
 const gameapi = [
   {
-    gameid: 1,
-    game_id: 661064,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 134,
     team_name_away: "Pittsburgh Pirates",
     team_away_logo:
       "http://www.capsinfo.com/images/MLB_Team_Logos/Pittsburgh_Pirates.png",
-
     team_id_home: 112,
     team_name_home: "Chicago Cubs",
     team_home_logo:
@@ -18,10 +13,6 @@ const gameapi = [
   },
 
   {
-    gameid: 2,
-    game_id: 663029,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 146,
     team_name_away: "Miami Marlins",
     team_away_logo:
@@ -34,10 +25,6 @@ const gameapi = [
   },
 
   {
-    gameid: 3,
-    game_id: 661054,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 139,
     team_name_away: "Tampa Bay Rays",
     team_away_logo:
@@ -50,10 +37,6 @@ const gameapi = [
   },
 
   {
-    gameid: 4,
-    game_id: 661563,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 144,
     team_name_away: "Atlanta Braves",
     team_away_logo:
@@ -66,10 +49,6 @@ const gameapi = [
   },
 
   {
-    gameid: 5,
-    game_id: 661716,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 138,
     team_name_away: "St. Louis Cardinals",
     team_away_logo: "./public/logo-files/StLouis_Cardinals.png",
@@ -81,10 +60,6 @@ const gameapi = [
   },
 
   {
-    gameid: 6,
-    game_id: 663203,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 114,
     team_name_away: "Cleveland Guardians",
     team_away_logo:
@@ -97,10 +72,6 @@ const gameapi = [
   },
 
   {
-    gameid: 7,
-    game_id: 662813,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 135,
     team_name_away: "San Diego Padres",
     team_away_logo:
@@ -113,10 +84,6 @@ const gameapi = [
   },
 
   {
-    gameid: 8,
-    game_id: 662438,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 147,
     team_name_away: "New York Yankees",
     team_away_logo:
@@ -129,10 +96,6 @@ const gameapi = [
   },
 
   {
-    gameid: 9,
-    game_id: 662653,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 108,
     team_name_away: "Los Angeles Angels",
     team_away_logo:
@@ -145,10 +108,6 @@ const gameapi = [
   },
 
   {
-    gameid: 10,
-    game_id: 661281,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 142,
     team_name_away: "Minnesota Twins",
     team_away_logo:
@@ -161,10 +120,6 @@ const gameapi = [
   },
 
   {
-    gameid: 11,
-    game_id: 661079,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 145,
     team_name_away: "Chicago White Sox",
     team_away_logo:
@@ -177,10 +132,6 @@ const gameapi = [
   },
 
   {
-    gameid: 12,
-    game_id: 662346,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 117,
     team_name_away: "Houston Astros",
     team_away_logo:
@@ -193,10 +144,6 @@ const gameapi = [
   },
 
   {
-    gameid: 13,
-    game_id: 663314,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 137,
     team_name_away: "San Francisco Giants",
     team_away_logo:
@@ -209,10 +156,6 @@ const gameapi = [
   },
 
   {
-    gameid: 14,
-    game_id: 662573,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 120,
     team_name_away: "Washington Nationals",
     team_away_logo:
@@ -225,10 +168,6 @@ const gameapi = [
   },
 
   {
-    gameid: 15,
-    game_id: 662184,
-    game_date: "2022-07-26",
-    game_status: "Preview",
     team_id_away: 140,
     team_name_away: "Texas Rangers",
     team_away_logo:
@@ -241,10 +180,6 @@ const gameapi = [
   },
 
   {
-    gameid: 16,
-    game_id: 661554,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 144,
     team_name_away: "Atlanta Braves",
     team_away_logo:
@@ -257,10 +192,6 @@ const gameapi = [
   },
 
   {
-    gameid: 17,
-    game_id: 662900,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 135,
     team_name_away: "San Diego Padres",
     team_away_logo:
@@ -273,10 +204,6 @@ const gameapi = [
   },
 
   {
-    gameid: 18,
-    game_id: 662652,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 108,
     team_name_away: "Los Angeles Angels",
     team_away_logo:
@@ -289,10 +216,6 @@ const gameapi = [
   },
 
   {
-    gameid: 19,
-    game_id: 661249,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 142,
     team_name_away: "Minnesota Twins",
     team_away_logo:
@@ -305,10 +228,6 @@ const gameapi = [
   },
 
   {
-    gameid: 20,
-    game_id: 662565,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 120,
     team_name_away: "Washington Nationals",
     team_away_logo:
@@ -321,10 +240,6 @@ const gameapi = [
   },
 
   {
-    gameid: 21,
-    game_id: 661078,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 145,
     team_name_away: "Chicago White Sox",
     team_away_logo:
@@ -337,10 +252,6 @@ const gameapi = [
   },
 
   {
-    gameid: 22,
-    game_id: 662345,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 117,
     team_name_away: "Houston Astros",
     team_away_logo:
@@ -353,10 +264,6 @@ const gameapi = [
   },
 
   {
-    gameid: 23,
-    game_id: 663294,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 137,
     team_name_away: "San Francisco Giants",
     team_away_logo:
@@ -369,10 +276,6 @@ const gameapi = [
   },
 
   {
-    gameid: 24,
-    game_id: 662165,
-    game_date: "2022-07-27",
-    game_status: "Preview",
 
     team_id_away: 140,
     team_name_away: "Texas Rangers",
@@ -386,10 +289,6 @@ const gameapi = [
   },
 
   {
-    gameid: 25,
-    game_id: 663028,
-    game_date: "2022-07-27",
-    game_status: "Preview",
 
     team_id_away: 146,
     team_name_away: "Miami Marlins",
@@ -403,10 +302,6 @@ const gameapi = [
   },
 
   {
-    gameid: 26,
-    game_id: 661053,
-    game_date: "2022-07-27",
-    game_status: "Preview",
 
     team_id_away: 139,
     team_name_away: "Tampa Bay Rays",
@@ -420,10 +315,6 @@ const gameapi = [
   },
 
   {
-    gameid: 27,
-    game_id: 661715,
-    game_date: "2022-07-27",
-    game_status: "Preview",
     team_id_away: 138,
     team_name_away: "St. Louis Cardinals",
     team_away_logo: "./public/logo-files/StLouis_Cardinals.png",
@@ -435,10 +326,6 @@ const gameapi = [
   },
 
   {
-    gameid: 28,
-    game_id: 663191,
-    game_date: "2022-07-27",
-    game_status: "Preview",
 
     team_id_away: 114,
     team_name_away: "Cleveland Guardians",
@@ -452,10 +339,6 @@ const gameapi = [
   },
 
   {
-    gameid: 29,
-    game_id: 662420,
-    game_date: "2022-07-27",
-    game_status: "Preview",
 
     team_id_away: 147,
     team_name_away: "New York Yankees",
@@ -469,10 +352,6 @@ const gameapi = [
   },
 
   {
-    gameid: 30,
-    game_id: 661052,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 139,
     team_name_away: "Tampa Bay Rays",
@@ -486,10 +365,6 @@ const gameapi = [
   },
 
   {
-    gameid: 31,
-    game_id: 663027,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 146,
     team_name_away: "Miami Marlins",
@@ -503,10 +378,6 @@ const gameapi = [
   },
 
   {
-    gameid: 32,
-    game_id: 662326,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 143,
     team_name_away: "Philadelphia Phillies",
@@ -520,10 +391,6 @@ const gameapi = [
   },
 
   {
-    gameid: 33,
-    game_id: 661257,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 118,
     team_name_away: "Kansas City Royals",
@@ -537,10 +404,6 @@ const gameapi = [
   },
 
   {
-    gameid: 34,
-    game_id: 661714,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 116,
     team_name_away: "Detroit Tigers",
@@ -554,10 +417,6 @@ const gameapi = [
   },
 
   {
-    gameid: 35,
-    game_id: 663200,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 114,
     team_name_away: "Cleveland Guardians",
@@ -571,10 +430,6 @@ const gameapi = [
   },
 
   {
-    gameid: 36,
-    game_id: 662907,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 136,
     team_name_away: "Seattle Mariners",
@@ -588,10 +443,6 @@ const gameapi = [
   },
 
   {
-    gameid: 37,
-    game_id: 661077,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 119,
     team_name_away: "Los Angeles Dodgers",
@@ -605,10 +456,6 @@ const gameapi = [
   },
 
   {
-    gameid: 38,
-    game_id: 663380,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 140,
     team_name_away: "Texas Rangers",
@@ -622,10 +469,6 @@ const gameapi = [
   },
 
   {
-    gameid: 39,
-    game_id: 662058,
-    game_date: "2022-07-28",
-    game_status: "Preview",
 
     team_id_away: 112,
     team_name_away: "Chicago Cubs",
@@ -639,10 +482,6 @@ const gameapi = [
   },
 
   {
-    gameid: 40,
-    game_id: 663026,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 110,
     team_name_away: "Baltimore Orioles",
@@ -655,10 +494,6 @@ const gameapi = [
       "http://www.capsinfo.com/images/MLB_Team_Logos/Cincinnati_Reds.png",
   },
   {
-    gameid: 41,
-    game_id: 661372,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 121,
     team_name_away: "New York Mets",
@@ -672,10 +507,6 @@ const gameapi = [
   },
 
   {
-    gameid: 42,
-    game_id: 662477,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 138,
     team_name_away: "St. Louis Cardinals",
@@ -688,10 +519,6 @@ const gameapi = [
   },
 
   {
-    gameid: 43,
-    game_id: 662435,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 143,
     team_name_away: "Philadelphia Phillies",
@@ -705,10 +532,6 @@ const gameapi = [
   },
 
   {
-    gameid: 44,
-    game_id: 661256,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 118,
     team_name_away: "Kansas City Royals",
@@ -722,10 +545,6 @@ const gameapi = [
   },
 
   {
-    gameid: 45,
-    game_id: 661713,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 116,
     team_name_away: "Detroit Tigers",
@@ -739,10 +558,6 @@ const gameapi = [
   },
 
   {
-    gameid: 46,
-    game_id: 661871,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 114,
     team_name_away: "Cleveland Guardians",
@@ -756,10 +571,6 @@ const gameapi = [
   },
 
   {
-    gameid: 47,
-    game_id: 663190,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 158,
     team_name_away: "Milwaukee Brewers",
@@ -773,10 +584,6 @@ const gameapi = [
   },
 
   {
-    gameid: 48,
-    game_id: 661501,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 109,
     team_name_away: "Arizona Diamondbacks",
@@ -790,10 +597,6 @@ const gameapi = [
   },
 
   {
-    gameid: 49,
-    game_id: 662745,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 136,
     team_name_away: "Seattle Mariners",
@@ -807,10 +610,6 @@ const gameapi = [
   },
 
   {
-    gameid: 50,
-    game_id: 661406,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 133,
     team_name_away: "Oakland Athletics",
@@ -824,10 +623,6 @@ const gameapi = [
   },
 
   {
-    gameid: 51,
-    game_id: 661076,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 119,
     team_name_away: "Los Angeles Dodgers",
@@ -841,10 +636,6 @@ const gameapi = [
   },
 
   {
-    gameid: 52,
-    game_id: 663379,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 140,
     team_name_away: "Texas Rangers",
@@ -858,10 +649,6 @@ const gameapi = [
   },
 
   {
-    gameid: 53,
-    game_id: 662268,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 142,
     team_name_away: "Minnesota Twins",
@@ -875,10 +662,6 @@ const gameapi = [
   },
 
   {
-    gameid: 54,
-    game_id: 662057,
-    game_date: "2022-07-29",
-    game_status: "Preview",
 
     team_id_away: 112,
     team_name_away: "Chicago Cubs",
@@ -892,10 +675,6 @@ const gameapi = [
   },
 
   {
-    gameid: 55,
-    game_id: 661870,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 114,
     team_name_away: "Cleveland Guardians",
@@ -909,10 +688,6 @@ const gameapi = [
   },
 
   {
-    gameid: 56,
-    game_id: 661255,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 118,
     team_name_away: "Kansas City Royals",
@@ -926,10 +701,6 @@ const gameapi = [
   },
 
   {
-    gameid: 57,
-    game_id: 661712,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 116,
     team_name_away: "Detroit Tigers",
@@ -943,10 +714,6 @@ const gameapi = [
   },
 
   {
-    gameid: 58,
-    game_id: 663192,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 158,
     team_name_away: "Milwaukee Brewers",
@@ -960,10 +727,6 @@ const gameapi = [
   },
 
   {
-    gameid: 59,
-    game_id: 661371,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 121,
     team_name_away: "New York Mets",
@@ -977,10 +740,6 @@ const gameapi = [
   },
 
   {
-    gameid: 60,
-    game_id: 663025,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 110,
     team_name_away: "Baltimore Orioles",
@@ -994,10 +753,6 @@ const gameapi = [
   },
 
   {
-    gameid: 61,
-    game_id: 662738,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 136,
     team_name_away: "Seattle Mariners",
@@ -1011,10 +766,6 @@ const gameapi = [
   },
 
   {
-    gameid: 62,
-    game_id: 662476,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 138,
     team_name_away: "St. Louis Cardinals",
@@ -1027,10 +778,6 @@ const gameapi = [
   },
 
   {
-    gameid: 63,
-    game_id: 662196,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 142,
     team_name_away: "Minnesota Twins",
@@ -1044,10 +791,6 @@ const gameapi = [
   },
 
   {
-    gameid: 64,
-    game_id: 662415,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 143,
     team_name_away: "Philadelphia Phillies",
@@ -1061,10 +804,6 @@ const gameapi = [
   },
 
   {
-    gameid: 65,
-    game_id: 661451,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 133,
     team_name_away: "Oakland Athletics",
@@ -1078,10 +817,6 @@ const gameapi = [
   },
 
   {
-    gameid: 66,
-    game_id: 661499,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 109,
     team_name_away: "Arizona Diamondbacks",
@@ -1095,10 +830,6 @@ const gameapi = [
   },
 
   {
-    gameid: 67,
-    game_id: 662989,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 119,
     team_name_away: "Los Angeles Dodgers",
@@ -1112,10 +843,6 @@ const gameapi = [
   },
 
   {
-    gameid: 68,
-    game_id: 662112,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 112,
     team_name_away: "Chicago Cubs",
@@ -1129,10 +856,6 @@ const gameapi = [
   },
 
   {
-    gameid: 69,
-    game_id: 663378,
-    game_date: "2022-07-30",
-    game_status: "Preview",
 
     team_id_away: 140,
     team_name_away: "Texas Rangers",
