@@ -124,10 +124,15 @@ main {
   line-height: 150%;
   border: 5px solid rgb(0, 0, 0);
   font-weight: bold;
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .game-card-win {
-  border: 2px solid rgb(0, 225, 75);
+  border: 3px solid rgb(0, 225, 75);
+}
+
+.game-card-lose {
+  border: 3px solid rgb(225, 0, 0);
 }
 
 /* .game .title span {
@@ -135,6 +140,16 @@ main {
   font-size: 90%;
   color: #7d7d7d;
 } */
+
+.title {
+  font-size: large;
+  color: white
+}
+
+.title a {
+  color: red;
+  font-size: extra-large;
+}
 
 .edit-link {
   display: block;
@@ -162,7 +177,9 @@ main {
 .comment:nth-child(odd) {
   background-color: #fff5eb;
 }
-
+.comment:nth-child(even) {
+  background-color: #fccfa1;
+}
 .comment .meta {
   font-size: 90%;
   margin-bottom: 0.5%;
@@ -204,17 +221,21 @@ h2 {
 }
 
 h6 {
-  color: white;
+  color: black;
 }
 
 img {
   width: 20%;
 }
 
-meta {
-  color: white;
+.meta a {
+  color: black;
 }
 
-.postgames {
-  background-color: black;
+.single-game {
+  background: rgba(255, 255, 255, 0.25);
 }
+
+/* .postgames {
+  background-color: black;
+} */

@@ -19,7 +19,10 @@ router.get("/", (req, res) => {
       "team_score_home",
       "team_score_away",
       "team_isWinner_home",
-      "team_isWinner_away"[
+      "team_isWinner_away",
+      'team_home_logo',
+      'team_away_logo',
+      [
         (sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)"
         ),
@@ -46,6 +49,8 @@ router.get("/voteable", (req, res) => {
       "team_name_away",
       "team_id_home",
       "team_id_away",
+      'team_home_logo',
+      'team_away_logo',
       [
         sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)"
@@ -89,7 +94,10 @@ router.get("/nonvoteable", (req, res) => {
       "team_score_home",
       "team_score_away",
       "team_isWinner_home",
-      "team_isWinner_away"[
+      "team_isWinner_away",
+      'team_home_logo',
+      'team_away_logo',
+      [
         (sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
         ),
@@ -135,6 +143,8 @@ router.get("/:id", (req, res) => {
       "team_score_away",
       "team_isWinner_home",
       "team_isWinner_away",
+      'team_home_logo',
+      'team_away_logo',
     ],
     include: [
       {

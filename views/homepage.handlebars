@@ -10,10 +10,11 @@
           <article class ='game-card'>
             <div class="title">
               <a href="/game/{{game.id}}" >{{game.team_name_home}} <img src = {{game.team_home_logo}}>  VS. {{game.team_name_away}} <img src = {{game.team_away_logo}}> </a>
+            </div>
             <div class="meta">
-              {{vote_count}} {{format_plural "point" vote_count}} by {{game.user.username}} on
+              {{!-- {{vote_count}} {{format_plural "point" vote_count}} by {{game.user.username}} on
               {{game.created_at}}
-              |
+              | --}}
               <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
             </div>
             <br>
@@ -46,22 +47,32 @@
               {{game.team_name_away}} Score: {{game.team_score_away}}
              {{!-- here's an "if" statement for showing the winning
             team - the game-card-win class in the stylesheet gives it a green border --}}
-             <br><div class="game-card-win">
+             <br>
                 {{#if game.team_isWinner_home}}
               {{!-- display home team logo here --}}
-              The {{team_name_home}} <img src = {{game.team_home_logo}}> won!!
+              <div class="game-card-win">
+                The {{game.team_name_home}} <img src = {{game.team_home_logo}}> won!!
+              </div>
+              <div class="game-card-lose">
+                The {{game.team_name_away}} <img src = {{game.team_away_logo}}> lost.
+              </div>              
               {{/if}}
               {{!-- display away team logo here--}}
               {{#if game.team_isWinner_away}}
-              The {{team_name_away}} <img src = {{game.team_away_logo}}> won!!
+              <div class="game-card-win">
+                The {{game.team_name_away}} <img src = {{game.team_away_logo}}> won!!
+              </div>
+              <div class="game-card-lose">
+                The {{game.team_name_home}} <img src = {{game.team_home_logo}}> lost.
+              </div>              
               {{/if}}
-            </div>
+            
             </div>
             <div class="meta">
               {{!-- I don't think we need the votes for past games! --}}
               {{!-- {{game.vote_count}} point(s) by {{game.user.username}} on
-              {{game.created_at}} --}}
-              |
+              {{game.created_at}} 
+              |--}}
               <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
             </div>
           </article>
