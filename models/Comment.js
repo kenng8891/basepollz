@@ -20,6 +20,7 @@ Comment.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      //unique: true,
       references: {
         model: "user",
         key: "id",
@@ -27,6 +28,7 @@ Comment.init(
     },
     game_id: {
       type: DataTypes.INTEGER,
+      //unique: true,
       references: {
         model: "game",
         key: "id",

@@ -1,8 +1,8 @@
+<div class="single-game"> 
 <article class="game">
-  <div class="title">
-    <a href="{{game.game_url}}" target="_blank">{{game.team_name_home}} VS. {{game/team_name_away}}</a>
-    <span>({{game.game_url}})</span>
-  </div>
+   <div class="title">
+         <h3>{{game.team_name_home}} <img src = {{game.team_home_logo}}> <br> VS. <br> {{game.team_name_away}} <img src = {{game.team_away_logo}}> </h3>
+            </div>
   <div class="meta">
     {{game.vote_count}} point(s) by {{game.user.username}} on
     {{game.created_at}}
@@ -25,8 +25,12 @@
 </form>
 {{/if}}
 
-<div class="comments">
-  {{#each game.comments}}
+
+  {{!-- This is a partial --}}
+{{!-- {{> comments comment}} --}}
+
+  <div class="comments">
+    {{#each game.comments}}
   <section class="comment">
     <div class="meta">
       {{user.username}} on {{created_at}}
@@ -35,7 +39,9 @@
       {{comment_text}}
     </div>
   </section>
+  </div>
   {{/each}}
+
 </div>
 
 {{#if loggedIn}}

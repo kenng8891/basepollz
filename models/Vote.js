@@ -8,6 +8,7 @@ Vote.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      unique: true,
       autoIncrement: true
     },
     user_id: {
@@ -21,7 +22,7 @@ Vote.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'game',
-        key: 'game_id'
+        key: 'id'
       }
     }
   },
