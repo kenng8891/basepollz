@@ -3,7 +3,6 @@ const Game = require("./Game");
 const User = require("./User");
 const Vote = require("./Vote");
 const Comment = require("./Comment");
-const Logo = require("./Logo");
 // create associations
 
 //ADD ALL THESE BACK IN WHEN WE ADD VOTING
@@ -56,9 +55,5 @@ Game.hasMany(Comment, {
 Comment.belongsTo(Game, {
   foreignKey: "game_id",
 });
-
-// Logo.belongsTo(Game, {
-//   foreignKey: "team_id",
-// });
 
 module.exports = { User, Game, Vote, Comment };

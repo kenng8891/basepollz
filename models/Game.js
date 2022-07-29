@@ -48,16 +48,6 @@ class Game extends Model {
 // create fields/columns for game model
 Game.init(
   {
-    // id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   primaryKey: true,
-    //   autoIncrement: true
-    // },
-    // title: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false
-    // },
     game_date: {
       type: DataTypes.DATEONLY,
       allowNull: true,
@@ -68,10 +58,6 @@ Game.init(
       unique: true,
       primarykey: true,
     },
-    //   liveFeedLink: {
-    //     type: DataTypes.STRING,
-    //     allowNull: true,
-    // },
     team_id_home: {
       type: DataTypes.INTEGER,
       allowNull: true,
