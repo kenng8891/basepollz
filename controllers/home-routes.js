@@ -19,7 +19,9 @@ router.get('/', (req, res) => {
       'team_score_home',
       'team_score_away',
       'team_isWinner_home',
-      'team_isWinner_away'
+      'team_isWinner_away',
+      'team_home_logo',
+      'team_away_logo'
       // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
     ],
     include: [
@@ -46,10 +48,10 @@ router.get('/', (req, res) => {
         }
       }
 
-      console.log('***********************************')
-      console.log(gamesPast);
-      console.log('***********************************')
-      console.log(gamesFuture);
+      // console.log('***********************************')
+      // console.log(gamesPast);
+      // console.log('***********************************')
+      // console.log(gamesFuture);
 
       res.render('homepage', {
         gamesFuture,
@@ -84,6 +86,8 @@ router.get('/game/:id', (req, res) => {
       'team_score_away',
       'team_isWinner_home',
       'team_isWinner_away',
+      'team_home_logo',
+      'team_away_logo',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
     ],
     include: [

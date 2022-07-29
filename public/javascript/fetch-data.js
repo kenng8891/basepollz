@@ -80,7 +80,9 @@ function getApi() {
             team_isWinner_away: datesObj[i].games[y].teams.away.isWinner,
             team_score_home: datesObj[i].games[y].teams.home.score,
             team_score_away: datesObj[i].games[y].teams.away.score,
-            game_status: datesObj[i].games[y].status.abstractGameState
+            game_status: datesObj[i].games[y].status.abstractGameState,
+            team_home_logo: '',
+            team_away_logo: ''
           })
         }
       }
@@ -98,7 +100,6 @@ function getApi() {
           }
         }
       }
-      console.log(allGames)
       
       //console.log("************" + datesObj);
 
@@ -138,7 +139,6 @@ function getApi() {
       // console.log(allGames);
 
       //ADD INTO DATABASE FROM DOWN YONDER
-      
        return allGames
 
 
