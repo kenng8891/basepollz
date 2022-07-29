@@ -112,6 +112,14 @@ Game.init(
       type: DataTypes.BOOLEAN,
       allowNull: true,
     },
+    team_home_logo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    team_away_logo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     //If we keep track of all user's votes, that would go below.
     // home_userVotes: {
     //   type: DataTypes.INTEGER,

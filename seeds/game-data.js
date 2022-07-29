@@ -51,7 +51,7 @@ const gameapi = [
   {
     team_id_away: 138,
     team_name_away: "St. Louis Cardinals",
-    team_away_logo: "./public/logo-files/StLouis_Cardinals.png",
+    team_away_logo: "http://www.capsinfo.com/images/MLB_Team_Logos/StLouis_Cardinals.png",
 
     team_id_home: 141,
     team_name_home: "Toronto Blue Jays",

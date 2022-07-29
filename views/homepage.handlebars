@@ -9,7 +9,7 @@
         <li class = "currentgames">
           <article class ='game-card'>
             <div class="title">
-              <a href="/game/{{game.id}}" >{{game.team_name_home}} <img src = "{{game.team_home_logo}}">  VS. {{game/team_name_away}} <img src = "{{game.team_away_logo}}"> </a>
+              <a href="/game/{{game.id}}" >{{game.team_name_home}} <img src = {{game.team_home_logo}}>  VS. {{game.team_name_away}} <img src = {{game.team_away_logo}}> </a>
             <div class="meta">
               {{vote_count}} {{format_plural "point" vote_count}} by {{game.user.username}} on
               {{game.created_at}}
@@ -49,11 +49,11 @@
              <br><div class="game-card-win">
                 {{#if game.team_isWinner_home}}
               {{!-- display home team logo here --}}
-              The {{team_name_home}} <img src ="http://www.capsinfo.com/images/MLB_Team_Logos/SanDiego_Padres.png"> won!!
+              The {{team_name_home}} <img src = {{game.team_home_logo}}> won!!
               {{/if}}
               {{!-- display away team logo here--}}
               {{#if game.team_isWinner_away}}
-              The {{team_name_away}} <img src ="http://www.capsinfo.com/images/MLB_Team_Logos/Detroit_Tigers.png"> won!!
+              The {{team_name_away}} <img src = {{game.team_away_logo}}> won!!
               {{/if}}
             </div>
             </div>
