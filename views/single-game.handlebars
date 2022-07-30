@@ -9,6 +9,7 @@
          <br>
          <div class="game-card-lose">
       The {{game.team_name_away}} lost.
+      <img src = {{game.team_away_logo}}>
       </div>
       {{else if game.team_isWinner_away}}
       <div class="game-card-win">
@@ -16,7 +17,7 @@
           <img src = {{game.team_away_logo}}>
           </div>
           <div class="game-card-lose">
-      The {{game.team_name_home}} lost.
+      The {{game.team_name_home}} lost. <img src =  {{game.team_home_logo}}>
       </div>
       {{else}}
          <h3>{{game.team_name_home}} <img src = {{game.team_home_logo}}> <br> <span class="vs-text">VS.</span> <br> {{game.team_name_away}} <img src = {{game.team_away_logo}}> </h3>
@@ -50,9 +51,9 @@
 </article>
 
   {{!-- This is a partial --}}
-{{!-- {{> comments comment}} --}}
+{{> comments}}
 
-  <div class="comments">
+  {{!-- <div class="comments">
     {{#each game.comments}}
   <section class="comment">
     <div class="meta">
@@ -63,7 +64,7 @@
     </div>
   </section>
   </div>
-  {{/each}}
+  {{/each}} --}}
 
 </div>
 

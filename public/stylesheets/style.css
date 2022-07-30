@@ -134,7 +134,12 @@ main {
 
 .game-card-lose {
   border: 3px solid rgb(225, 0, 0);
-  background-color: rgba(225, 0, 0, .20)
+  background-color: rgba(225, 0, 0, .20);
+}
+
+.game-card-lose img {
+  max-height:  75px;
+  width:auto
 }
 
 /* .game .title span {
