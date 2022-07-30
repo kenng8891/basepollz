@@ -1,15 +1,38 @@
 <div class="single-game"> 
 <article class="game">
    <div class="title">
+      {{#if game.team_isWinner_home }}
+      <div class="game-card-win">
+      The {{game.team_name_home}} won!
+         <img src =  {{game.team_home_logo}}>
+         </div>
+         <br>
+         <div class="game-card-lose">
+      The {{game.team_name_away}} lost.
+      </div>
+      {{else if game.team_isWinner_away}}
+      <div class="game-card-win">
+      The {{game.team_name_away}} won!
+          <img src = {{game.team_away_logo}}>
+          </div>
+          <div class="game-card-lose">
+      The {{game.team_name_home}} lost.
+      </div>
+      {{else}}
          <h3>{{game.team_name_home}} <img src = {{game.team_home_logo}}> <br> <span class="vs-text">VS.</span> <br> {{game.team_name_away}} <img src = {{game.team_away_logo}}> </h3>
+      {{/if}}
+
+
             </div>
   <div class="meta">
-    {{game.vote_count}} point(s) by {{game.user.username}} on
+    <span class='date'> Game date: {{format_date game.game_date}}</span>
+<br>
+{{game.vote_count}} point(s) by {{game.user.username}} on
     {{game.created_at}}
-    |
+    |            
     <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
   </div>
-</article>
+
 
 {{#if loggedIn}}
 <form class="comment-form">
@@ -24,7 +47,7 @@
   </div>
 </form>
 {{/if}}
-
+</article>
 
   {{!-- This is a partial --}}
 {{!-- {{> comments comment}} --}}

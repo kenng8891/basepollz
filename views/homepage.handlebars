@@ -12,9 +12,9 @@
               <a href="/game/{{game.id}}" >{{game.team_name_home}} <img src = {{game.team_home_logo}}>  <span class="vs-text">VS.</span> {{game.team_name_away}} <img src = {{game.team_away_logo}}> </a>
             </div>
             <div class="meta">
-              {{!-- {{vote_count}} {{format_plural "point" vote_count}} by {{game.user.username}} on
-              {{game.created_at}}
-              | --}}
+                          <span class='date'> Game date: {{format_date game_date}} </span>
+                          {{!-- {{format_date game.game_date}} --}}
+<br>
               <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
             </div>
             <br>
@@ -40,7 +40,7 @@
           <article class ='game-card'>
             <div class="title">
              <a href="/game/{{game.id}}" >{{game.team_name_home}} <span class="vs-text">VS.</span> {{game/team_name_away}}</a>
-              <span>Game date: {{game_date}}</span>
+              <span class='date'> Game date: {{format_date game_date}}</span>
             </div>
             <div class="scores"> 
               {{game.team_name_home}} Score: {{game.team_score_home}}
@@ -59,12 +59,12 @@
               {{/if}}
               {{!-- display away team logo here--}}
               {{#if game.team_isWinner_away}}
-              <div class="game-card-win">
-                The {{game.team_name_away}} <img src = {{game.team_away_logo}}> won!!
-              </div>
               <div class="game-card-lose">
                 The {{game.team_name_home}} <img src = {{game.team_home_logo}}> lost.
               </div>              
+              <div class="game-card-win">
+                The {{game.team_name_away}} <img src = {{game.team_away_logo}}> won!!
+              </div>
               {{/if}}
             
             </div>

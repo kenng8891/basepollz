@@ -129,10 +129,12 @@ main {
 
 .game-card-win {
   border: 3px solid rgb(0, 225, 75);
+  background-color: rgba(0, 225, 75, .20);
 }
 
 .game-card-lose {
   border: 3px solid rgb(225, 0, 0);
+  background-color: rgba(225, 0, 0, .20)
 }
 
 /* .game .title span {
@@ -143,12 +145,16 @@ main {
 
 .title {
   font-size: large;
-  color: white
+  /* color: white; */
+  text-align: center;
 }
 
 .title a {
   color: red;
   font-size: extra-large;
+}
+.date {
+  color: black
 }
 
 .edit-link {

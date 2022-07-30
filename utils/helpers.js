@@ -19,4 +19,12 @@ module.exports = {
 
     return word;
   },
+  format_date: (oldDate) => {
+  
+    date = oldDate.split("-");
+   
+    return `${date[1]}/${date[2]}/${date[0]}`
+    // return date[1] + '/' + date[2] + '/' + date[0]
+  
+  }
 };

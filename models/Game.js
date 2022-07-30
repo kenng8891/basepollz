@@ -100,11 +100,11 @@ Game.init(
     },
     team_home_logo: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     team_away_logo: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     //If we keep track of all user's votes, that would go below.
     // home_userVotes: {
