@@ -23,10 +23,16 @@ router.get("/", (req, res) => {
       'team_home_logo',
       'team_away_logo',
       [
-        (sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)"
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
         ),
-        "vote_count")
+        "vote_count_home",
+      ],
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+        ),
+        "vote_count_away",
       ],
     ],
   })
@@ -79,51 +85,59 @@ router.get("/", (req, res) => {
 //     });
 // });
 // get all nonvoteable/ past or live games
-router.get("/nonvoteable", (req, res) => {
-  Game.findAll({
-    attributes: [
-      "id",
-      "game_id",
-      "game_date",
-      "game_status",
-      //  'liveFeedLink',
-      "team_name_home",
-      "team_name_away",
-      "team_id_home",
-      "team_id_away",
-      "team_score_home",
-      "team_score_away",
-      "team_isWinner_home",
-      "team_isWinner_away",
-      'team_home_logo',
-      'team_away_logo',
-      [
-        (sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
-        ),
-        "vote_count")
-      ],
-    ],
-    include: [
-      {
-        model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-        include: {
-          model: User,
-          attributes: ["username"],
-        },
-      },
-    ],
-    where: {
-      game_status: ["Live", "Final"],
-    },
-  })
-    .then((dbGameData) => res.json(dbGameData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.get("/nonvoteable", (req, res) => {
+//   Game.findAll({
+//     attributes: [
+//       "id",
+//       "game_id",
+//       "game_date",
+//       "game_status",
+//       //  'liveFeedLink',
+//       "team_name_home",
+//       "team_name_away",
+//       "team_id_home",
+//       "team_id_away",
+//       "team_score_home",
+//       "team_score_away",
+//       "team_isWinner_home",
+//       "team_isWinner_away",
+//       'team_home_logo',
+//       'team_away_logo',
+//       [
+//         sequelize.literal(
+//           "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+//         ),
+//         "vote_count_home",
+//       ],
+//       [
+//         sequelize.literal(
+//           "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+//         ),
+//         "vote_count_away",
+//       ],
+//     ],
+//     include: [
+//       {
+//         model: Comment,
+//         attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+//         include: {
+//           model: User,
+//           attributes: ["username"],
+//         },
+//       },
+//     ],
+//     where: {
+//       game_status: ["Live", "Final"],
+//     },
+//   })
+//     .then((dbGameData) => res.json(dbGameData))
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
+
+
 router.get("/:id", (req, res) => {
   Game.findOne({
     where: {
@@ -145,6 +159,18 @@ router.get("/:id", (req, res) => {
       "team_isWinner_away",
       'team_home_logo',
       'team_away_logo',
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+        ),
+        "vote_count_home",
+      ],
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+        ),
+        "vote_count_away",
+      ],
     ],
     include: [
       {

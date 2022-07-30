@@ -35,7 +35,13 @@ router.get("/", withAuth, (req, res) => {
         sequelize.literal(
           "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
         ),
-        "vote_count",
+        "vote_count_home",
+      ],
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+        ),
+        "vote_count_away",
       ],
     ],
     include: [

@@ -67,7 +67,6 @@ textarea {
 
 form > div {
   margin-bottom: 2%;
-  margin: 20%;
 }
 
 form label {
@@ -162,17 +161,12 @@ main {
   color: black
 }
 
-.edit-link {
-  display: block;
-  margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
+.upvote-btn-home, .upvote-btn-away {
   background-color: #197d0f;
   transition: background-color 0.1s;
 }
 
-.upvote-btn:hover {
+.upvote-btn-home:hover, .upvote-btn-away:hover {
   background-color: #1f9c13;
 }
 

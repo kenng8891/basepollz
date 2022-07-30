@@ -25,8 +25,19 @@ Vote.init(
         key: 'id'
       }
     },
-    voted: {
-      type: DataTypes.BOOLEAN,
+    home_team: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'game',
+        key: 'team_id_home'
+      }
+    },
+    away_team: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'game',
+        key: 'team_id_away'
+      }
     }
   },
   {

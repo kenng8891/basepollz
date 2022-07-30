@@ -27,10 +27,12 @@
             </div>
   <div class="meta">
     <span class='date'> Game date: {{format_date game.game_date}}</span>
+    {{!-- THE VOTING STUFF IS RIGHT HERE --}}
 <br>
-{{game.vote_count}} point(s) by {{game.user.username}} on
-    {{game.created_at}}
-    |            
+The {{game.team_name_home}} have {{game.vote_count_home}} {{format_plural "vote" game.vote_count_home}}.
+<br>
+The {{game.team_name_away}} have {{game.vote_count_away}} {{format_plural "vote" game.vote_count_away}}.
+    |             
     <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
   </div>
 
@@ -43,8 +45,9 @@
 
   <div>
     <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
-    <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button>
+    {{!-- Additional voting stuff --}}
+    <button type="button" class="upvote-btn-home">Vote for the {{game.team_name_home}}</button>
+    <button type="button" class="upvote-btn-away">Vote for the {{game.team_name_away}}</button>
   </div>
 </form>
 {{/if}}
@@ -53,18 +56,6 @@
   {{!-- This is a partial --}}
 {{> comments}}
 
-  {{!-- <div class="comments">
-    {{#each game.comments}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
-  </div>
-  {{/each}} --}}
 
 </div>
 

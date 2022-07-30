@@ -6,6 +6,8 @@ class Game extends Model {
     return models.Vote.create({
       user_id: body.user_id,
       game_id: body.game_id,
+
+
     }).then(() => {
       return Game.findOne({
         where: {
@@ -14,14 +16,22 @@ class Game extends Model {
         attributes: [
           "game_date",
           "game_id",
+          "team_id_home",
+          "team_id_away",
           "team_name_home",
           "team_name_away",
           "game_status",
           [
             sequelize.literal(
+              "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id )"
+            ),
+            "vote_count_home",
+          ],
+          [
+            sequelize.literal(
               "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
             ),
-            "vote_count",
+            "vote_count_away",
           ],
         ],
         include: [
@@ -30,7 +40,7 @@ class Game extends Model {
             attributes: [
               "id",
               "comment_text",
-              "game_id",
+              "post_id",
               "user_id",
               "created_at",
             ],
