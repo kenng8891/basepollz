@@ -54,9 +54,9 @@ function retrieveData() {
   }
 }
 
-function getApi() {
+async function getApi() {
   var mlbApi = 'http://statsapi.mlb.com/api/v1/schedule/games/?sportId=1&startDate='+priorDate+'&endDate='+tmwDate;
-  fetch(mlbApi)
+ await fetch(mlbApi)
     .then(function(response) {
       return response.json();
     })
