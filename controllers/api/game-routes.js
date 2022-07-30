@@ -37,47 +37,47 @@ router.get("/", (req, res) => {
     });
 });
 // get all voteable/upcoming games
-router.get("/voteable", (req, res) => {
-  Game.findAll({
-    attributes: [
-      "id",
-      "game_id",
-      "game_date",
-      "game_status",
-      //'liveFeedLink',
-      "team_name_home",
-      "team_name_away",
-      "team_id_home",
-      "team_id_away",
-      'team_home_logo',
-      'team_away_logo',
-      [
-        sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)"
-        ),
-        "vote_count",
-      ],
-    ],
-    include: [
-      {
-        model: Comment,
-        attributes: ["id", "comment_text", "game_id", "user_id", "created_at"],
-        include: {
-          model: User,
-          attributes: ["username"],
-        },
-      },
-    ],
-    where: {
-      game_status: "Preview",
-    },
-  })
-    .then((dbGameData) => res.json(dbGameData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.get("/voteable", (req, res) => {
+//   Game.findAll({
+//     attributes: [
+//       "id",
+//       "game_id",
+//       "game_date",
+//       "game_status",
+//       //'liveFeedLink',
+//       "team_name_home",
+//       "team_name_away",
+//       "team_id_home",
+//       "team_id_away",
+//       'team_home_logo',
+//       'team_away_logo',
+//       [
+//         sequelize.literal(
+//           "(SELECT COUNT(*) FROM vote WHERE game.game_id = vote.game_id)"
+//         ),
+//         "vote_count",
+//       ],
+//     ],
+//     include: [
+//       {
+//         model: Comment,
+//         attributes: ["id", "comment_text", "game_id", "user_id", "created_at"],
+//         include: {
+//           model: User,
+//           attributes: ["username"],
+//         },
+//       },
+//     ],
+//     where: {
+//       game_status: "Preview",
+//     },
+//   })
+//     .then((dbGameData) => res.json(dbGameData))
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 // get all nonvoteable/ past or live games
 router.get("/nonvoteable", (req, res) => {
   Game.findAll({
@@ -107,7 +107,7 @@ router.get("/nonvoteable", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "game_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],
@@ -149,7 +149,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ["id", "comment_text", "game_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
         include: {
           model: User,
           attributes: ["username"],

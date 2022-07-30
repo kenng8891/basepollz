@@ -24,6 +24,9 @@ Vote.init(
         model: 'game',
         key: 'id'
       }
+    },
+    voted: {
+      type: DataTypes.BOOLEAN,
     }
   },
   {

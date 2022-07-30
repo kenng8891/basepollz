@@ -26,7 +26,7 @@ Comment.init(
         key: "id",
       },
     },
-    game_id: {
+    post_id: {
       type: DataTypes.INTEGER,
       //unique: true,
       references: {

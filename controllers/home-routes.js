@@ -1,49 +1,49 @@
-const router = require('express').Router();
-const sequelize = require('../config/connection');
-const { Game, User, Comment, Vote } = require('../models');
+const router = require("express").Router();
+const sequelize = require("../config/connection");
+const { Game, User, Comment, Vote } = require("../models");
 
 // get all games for homepage (FUTURE and PAST games)
-router.get('/', (req, res) => {
-  console.log('======================');
+router.get("/", (req, res) => {
+  console.log("======================");
   Game.findAll({
     attributes: [
-      'id',
-      'game_id',
-      'game_date',
-      'game_status',
+      "id",
+      "game_id",
+      "game_date",
+      "game_status",
       // 'liveFeedLink',
-      'team_name_home',
-      'team_name_away',
-      'team_id_home',
-      'team_id_away',
-      'team_score_home',
-      'team_score_away',
-      'team_isWinner_home',
-      'team_isWinner_away',
-      'team_home_logo',
-      'team_away_logo'
+      "team_name_home",
+      "team_name_away",
+      "team_id_home",
+      "team_id_away",
+      "team_score_home",
+      "team_score_away",
+      "team_isWinner_home",
+      "team_isWinner_away",
+      "team_home_logo",
+      "team_away_logo",
       // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'game_id', 'user_id', 'created_at'],
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
         include: {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ["username"],
+        },
       },
-    ]
+    ],
   })
-    .then(dbGameData => {
-      const games= dbGameData.map(game => game.get({ plain: true }));
+    .then((dbGameData) => {
+      const games = dbGameData.map((game) => game.get({ plain: true }));
       let gamesFuture = [];
       let gamesPast = [];
 
-      for (i=0; i<games.length; i++){
-        if(games[i].game_status === 'Preview'){
+      for (i = 0; i < games.length; i++) {
+        if (games[i].game_status === "Preview") {
           gamesFuture.push(games[i]);
-        }else{
+        } else {
           gamesPast.push(games[i]);
         }
       }
@@ -53,80 +53,84 @@ router.get('/', (req, res) => {
       // console.log('***********************************')
       // console.log(gamesFuture);
 
-      res.render('homepage', {
+      res.render("homepage", {
         gamesFuture,
         gamesPast,
         loggedIn: req.session.loggedIn,
-
       });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
 // get single game
-router.get('/game/:id', (req, res) => {
+router.get("/game/:id", (req, res) => {
   Game.findOne({
     where: {
-      id: req.params.id
+      id: req.params.id,
     },
     attributes: [
-      'id',
-      'game_id',
-      'game_date',
-      'game_status',
+      "id",
+      "game_id",
+      "game_date",
+      "game_status",
       // 'liveFeedLink',
-      'team_name_home',
-      'team_name_away',
-      'team_id_home',
-      'team_id_away',
-      'team_score_home',
-      'team_score_away',
-      'team_isWinner_home',
-      'team_isWinner_away',
-      'team_home_logo',
-      'team_away_logo',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)'), 'vote_count']
+      "team_name_home",
+      "team_name_away",
+      "team_id_home",
+      "team_id_away",
+      "team_score_home",
+      "team_score_away",
+      "team_isWinner_home",
+      "team_isWinner_away",
+      "team_home_logo",
+      "team_away_logo",
+      [
+        sequelize.literal(
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+        ),
+        "vote_count",
+      ],
     ],
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'game_id', 'user_id', 'created_at'],
+        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
         include: {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ["username"],
+        },
       },
-    ]
+    ],
   })
-    .then(dbGameData => {
+    .then((dbGameData) => {
       if (!dbGameData) {
-        res.status(404).json({ message: 'No game found with this id' });
+        res.status(404).json({ message: "No game found with this id" });
         return;
       }
-
+      // console.log(dbGameData);
       const game = dbGameData.get({ plain: true });
-
-      res.render('single-game', {
+      console.log(game.comments);
+      res.render("single-game", {
         game,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
       });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
 
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
