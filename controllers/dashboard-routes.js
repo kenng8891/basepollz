@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Game, User, Comment, Vote } = require("../models");
+const { Game, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 //CHANGES TO MAKE: THIS SHOULD BE THE USER PROFILE PAGE.
@@ -31,12 +31,12 @@ router.get("/", withAuth, (req, res) => {
       'team_isWinner_away',
       'team_home_logo',
       'team_away_logo',
-      [
-        sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
-        ),
-        "vote_count",
-      ],
+      // [
+      //   sequelize.literal(
+      //     "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+      //   ),
+      //   "vote_count",
+      // ],
     ],
     include: [
       {

@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Game, User, Comment, Vote } = require("../models");
+const { Game, User, Comment } = require("../models");
 
 // get all games for homepage (FUTURE and PAST games)
 router.get("/", (req, res) => {
@@ -87,12 +87,12 @@ router.get("/game/:id", (req, res) => {
       "team_isWinner_away",
       "team_home_logo",
       "team_away_logo",
-      [
-        sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
-        ),
-        "vote_count",
-      ],
+      // [
+      //   sequelize.literal(
+      //     "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+      //   ),
+      //   "vote_count",
+      // ],
     ],
     include: [
       {
