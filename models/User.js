@@ -37,11 +37,6 @@ User.init(
       validate: {
         len: [4]
       }
-    },
-    //determines whether user voted or not
-    voted: {
-      type: DataTypes.STRING,
-      allowNull: true
     }
   },
   {

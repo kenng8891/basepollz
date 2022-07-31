@@ -2,7 +2,7 @@ const seedUsers = require('./user-seeds');
 const seedGames = require('../public/javascript/fetch-data');
 // const seedGames = require('./game-data');
 const seedComments = require('./comment-seeds');
-const seedVotes = require('./vote-seeds');
+// const seedVotes = require('./vote-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -16,11 +16,11 @@ const seedAll = async () => {
   await seedGames;
   console.log('--------------');
 
-  await seedComments();
-  console.log('--------------');
+  // await seedComments();
+  // console.log('--------------');
 
-  await seedVotes();
-  console.log('--------------');
+  // await seedVotes();
+  // console.log('--------------');
 
   process.exit(0);
 };

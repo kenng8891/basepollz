@@ -27,12 +27,10 @@
             </div>
   <div class="meta">
     <span class='date'> Game date: {{format_date game.game_date}}</span>
-    {{!-- THE VOTING STUFF IS RIGHT HERE --}}
 <br>
-The {{game.team_name_home}} have {{game.vote_count_home}} {{format_plural "vote" game.vote_count_home}}.
-<br>
-The {{game.team_name_away}} have {{game.vote_count_away}} {{format_plural "vote" game.vote_count_away}}.
-    |             
+{{game.vote_count}} point(s) by {{game.user.username}} on
+    {{game.created_at}}
+    |            
     <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
   </div>
 
@@ -45,9 +43,8 @@ The {{game.team_name_away}} have {{game.vote_count_away}} {{format_plural "vote"
 
   <div>
     <button type="submit">add comment</button>
-    {{!-- Additional voting stuff --}}
-    <button type="button" class="upvote-btn-home">Vote for the {{game.team_name_home}}</button>
-    <button type="button" class="upvote-btn-away">Vote for the {{game.team_name_away}}</button>
+    {{!-- <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
+    <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button> --}}
   </div>
 </form>
 {{/if}}
@@ -56,11 +53,10 @@ The {{game.team_name_away}} have {{game.vote_count_away}} {{format_plural "vote"
   {{!-- This is a partial --}}
 {{> comments}}
 
-
 </div>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+{{!-- <script src="/javascript/upvote.js"></script> --}}
 {{/if}}
 
