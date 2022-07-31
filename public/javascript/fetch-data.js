@@ -51,6 +51,7 @@ const teamLogos = [
 function retrieveData() {
   if (now.hours() === reloadTime) {
     getApi();
+
   }
 }
 
@@ -148,6 +149,10 @@ async function getApi() {
     Game.bulkCreate(gamesData);
     allGames = gamesData;
   })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 
 }
 

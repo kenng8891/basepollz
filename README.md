@@ -1,28 +1,35 @@
 # Basepollz
 
-README Items:
-User Story
-Installation
-Usage
-Credits
-License
+  ## Table of Contents
+  - [Description](#description)
+  - [User Story](#user-story)
+  - [Installation](#install)
+  - [Usage](#usage)
+  - [Questions](#questions)
+  - [License](#license)
 
-# User Story
+## Description
+Basepollz is a webpage for baseball enthusiasts to view all previous baseball games, and tomorrow's upcoming games. Users can sign up, comment on games, and check scores that are updated daily. 
 
-•AS A baseball fan
-•I WANT a website to discuss each game and view upcoming games and previous games with scores
-•SO THAT I can track winners of each game and have a consolidated source of all MLB games
+## User Story
+
+•AS A baseball fan  
+•I WANT a website to discuss each game and view upcoming games and previous games with scores  
+•SO THAT I can track winners of each game and have a consolidated source of all MLB games  
 
 ## Installation
 
-Deploy the website and navigate through the website.
+npm i
+npm run seeds
+npm start
 
 ## Usage
 
+Deploy the website, sign up, browse the homepage, and comment on games.  
 The website can be deployed by clicking on the following link:
 
-After deploying the website the user can calculate the currency exchange by entering any amount of the currency in the country of origin, pressing the 'Convert Currency' butotn which will calculate the output of the conversion.
-![Screenshot of the website](assets/images/Deployed.png)
+
+![Screenshot of the website](assets/images/screenshot.jpg)
 
 ## Credits
 
