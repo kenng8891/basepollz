@@ -24,13 +24,13 @@ router.get("/", (req, res) => {
       'team_away_logo',
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id AND game.team_id_home = vote.home_vote)"
         ),
         "vote_count_home",
       ],
       [
         sequelize.literal(
-          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+          "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id AND game.team_id_away = vote.away_vote)"
         ),
         "vote_count_away",
       ],
@@ -200,7 +200,7 @@ router.put("/upvote", (req, res) => {
   // custom static method created in models/Game.js
   if (req.session) {
     Game.upvote(
-      { ...req.body, user_id: req.session.user_id },
+      { ...req.body, user_id: req.session.id },
       { Vote, Comment, User }
     )
       .then((updatedVoteData) => res.json(updatedVoteData))
