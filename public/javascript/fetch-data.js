@@ -160,7 +160,4 @@ async function getApi() {
 getApi();
 // setInterval(retrieveData, 3600000);
 
- //console.log( "test test" + allGames + "test test"); 
-const test = console.log("this is a")
-
 module.exports = getApi();
