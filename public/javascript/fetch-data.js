@@ -8,7 +8,7 @@ var now = moment();
 var priorDate = now.subtract(1, "days").format("YYYY-MM-DD");
 //not sure why we need 2 below to get to tomorrow's date, but we can adjust this # to get however many days in advance that we want
 var tmwDate = now.add(2, "days").format("YYYY-MM-DD");
-const reloadTime = 6;
+// const reloadTime = 6;
 
 let allGames = [];
 let datesObj = {};
@@ -79,12 +79,12 @@ const teamLogos = [
 
 //SET THE INTERVAL TO CHECK HOURLY (IF CURRENT HOUR = 6AM, ELSE DO NOTHING   )
 
-function retrieveData() {
-  if (now.hours() === reloadTime) {
-    getApi();
+// function retrieveData() {
+//   if (now.hours() === reloadTime) {
+//     getApi();
 
-  }
-}
+//   }
+// }
 
 async function getApi() {
   var mlbApi =
