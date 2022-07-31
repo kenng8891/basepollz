@@ -2,47 +2,47 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 // create our game model
 class Game extends Model {
-  static upvote(body, models) {
-    return models.Vote.create({
-      user_id: body.user_id,
-      game_id: body.game_id,
-    }).then(() => {
-      return Game.findOne({
-        where: {
-          id: body.game_id,
-        },
-        attributes: [
-          "game_date",
-          "game_id",
-          "team_name_home",
-          "team_name_away",
-          "game_status",
-          [
-            sequelize.literal(
-              "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
-            ),
-            "vote_count",
-          ],
-        ],
-        include: [
-          {
-            model: models.Comment,
-            attributes: [
-              "id",
-              "comment_text",
-              "game_id",
-              "user_id",
-              "created_at",
-            ],
-            include: {
-              model: models.User,
-              attributes: ["username"],
-            },
-          },
-        ],
-      });
-    });
-  }
+  // static upvote(body, models) {
+  //   return models.Vote.create({
+  //     user_id: body.user_id,
+  //     game_id: body.game_id,
+  //   }).then(() => {
+  //     return Game.findOne({
+  //       where: {
+  //         id: body.game_id,
+  //       },
+  //       attributes: [
+  //         "game_date",
+  //         "game_id",
+  //         "team_name_home",
+  //         "team_name_away",
+  //         "game_status",
+  //         // [
+  //         //   sequelize.literal(
+  //         //     "(SELECT COUNT(*) FROM vote WHERE game.id = vote.game_id)"
+  //         //   ),
+  //         //   "vote_count",
+  //         // ],
+  //       ],
+  //       include: [
+  //         {
+  //           model: models.Comment,
+  //           attributes: [
+  //             "id",
+  //             "comment_text",
+  //             "game_id",
+  //             "user_id",
+  //             "created_at",
+  //           ],
+  //           include: {
+  //             model: models.User,
+  //             attributes: ["username"],
+  //           },
+  //         },
+  //       ],
+  //     });
+  //   });
+  // }
 }
 
 // create fields/columns for game model

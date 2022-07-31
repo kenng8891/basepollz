@@ -1,7 +1,7 @@
 // import all models
 const Game = require("./Game");
 const User = require("./User");
-const Vote = require("./Vote");
+
 const Comment = require("./Comment");
 // create associations
 
@@ -20,23 +20,25 @@ const Comment = require("./Comment");
 //   foreignKey: 'game_id',
 //   onDelete: 'SET NULL'
 // });
-Vote.belongsTo(User, {
-  foreignKey: "user_id",
-  onDelete: "SET NULL",
-});
 
-Vote.belongsTo(Game, {
-  foreignKey: "game_id",
-  onDelete: "SET NULL",
-});
 
-User.hasMany(Vote, {
-  foreignKey: "user_id",
-});
+// Vote.belongsTo(User, {
+//   foreignKey: "user_id",
+//   onDelete: "SET NULL",
+// });
 
-Game.hasMany(Vote, {
-  foreignKey: "game_id",
-});
+// Vote.belongsTo(Game, {
+//   foreignKey: "game_id",
+//   onDelete: "SET NULL",
+// });
+
+// User.hasMany(Vote, {
+//   foreignKey: "user_id",
+// });
+
+// Game.hasMany(Vote, {
+//   foreignKey: "game_id",
+// });
 
 // Users and comments
 User.hasMany(Comment, {
@@ -56,4 +58,4 @@ Comment.belongsTo(Game, {
   foreignKey: "post_id",
 });
 
-module.exports = { User, Game, Vote, Comment };
+module.exports = { User, Game, Comment };

@@ -43,8 +43,8 @@
 
   <div>
     <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
-    <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button>
+    {{!-- <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
+    <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button> --}}
   </div>
 </form>
 {{/if}}
@@ -53,23 +53,10 @@
   {{!-- This is a partial --}}
 {{> comments}}
 
-  {{!-- <div class="comments">
-    {{#each game.comments}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
-  </div>
-  {{/each}} --}}
-
 </div>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
+{{!-- <script src="/javascript/upvote.js"></script> --}}
 {{/if}}
 

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Game, Comment, Vote } = require('../../models');
+const { User, Game, Comment } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -28,12 +28,12 @@ router.get('/:id', (req, res) => {
           attributes: ['game_id', 'team_name_home', 'team_name_away']
         }
       },
-      {
-        model: Game,
-        attributes: ['game_id'],
-        through: Vote,
-        as: 'voted_games'
-      }
+      // {
+      //   model: Game,
+      //   attributes: ['game_id'],
+      //   through: Vote,
+      //   as: 'voted_games'
+      // }
     ]
   })
     .then(dbUserData => {

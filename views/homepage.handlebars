@@ -18,12 +18,17 @@
               <a href="/game/{{game.id}}">{{game.comments.length}} comment(s)</a>
             </div>
             <br>
-            <h6>Who do you think will win?</h6>
+            {{!-- <h6>Who do you think will win?</h6> --}}
             <div>
               {{!-- i don't think either of these buttons work yet! Upvote.js is connect but only set
               up to "upvote" a game, rather than vote on a team --}}
+<<<<<<< HEAD
               <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
               <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button>
+=======
+              {{!-- <button type="button" class="upvote-btn">Vote for the {{game.team_name_home}}</button>
+    <button type="button" class="upvote-btn">Vote for the {{game.team_name_away}}</button> --}}
+>>>>>>> 5bd7d0c2f3e4f818c6c52852432de254358be5db
             </div>
           </article>
         </li>
@@ -87,5 +92,5 @@
 </div>
 {{#if loggedIn}}
 
-<script src="/javascript/upvote.js"></script>
+{{!-- <script src="/javascript/upvote.js"></script> --}}
 {{/if}}
