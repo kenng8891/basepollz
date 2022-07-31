@@ -130,51 +130,16 @@ async function getApi() {
           }
         }
       }
-
-      //console.log("************" + datesObj);
-
-      //------------------------------------------------------------------------------
-      //LEAVING THE FOLLOWING JUST IN CASE WE WANT TO GO BACK TO THE OLD WAY??
-
-      // for (let i = 0; i< datesObj[1].games.length; i++){
-      //   todayGames.push({
-      //     game_date: datesObj[1].date,
-      //     game_id: datesObj[1].games[i].gamePk,
-      //     team_name_home: datesObj[1].games[i].teams.home.team.name,
-      //     team_name_away: datesObj[1].games[i].teams.away.team.name,
-      //     team_id_home: datesObj[1].games[i].teams.home.team.id,
-      //     team_id_away: datesObj[1].games[i].teams.away.team.id,
-      //     // team_score_home: datesObj[1].games[i].teams.home.score,
-      //     // team_score_away: datesObj[1].games[i].teams.away.score,
-      //     game_status: datesObj[1].games[i].status.abstractGameState
-      //   })
-      // }
-
-      //let nextWeekGames =[]
-      // let tmwGames = []
-      // for (let i = 0; i< datesObj[2].games.length; i++){
-      //for (let i = 2; i< datesObj[8].games.length; i++){
-      //   tmwGames.push({
-      //     game_date: datesObj[2].date,
-      //     game_id: datesObj[2].games[i].gamePk,
-      //     team_name_home: datesObj[2].games[i].teams.home.team.name,
-      //     team_name_away: datesObj[2].games[i].teams.away.team.name,
-      //     team_id_home: datesObj[2].games[i].teams.home.team.id,
-      //     team_id_away: datesObj[2].games[i].teams.away.team.id,
-      //     game_status: datesObj[2].games[i].status.abstractGameState
-      //   })
-      // }
-      //---------------------------------------------------------------------------------
-
-      // console.log(allGames);
-
-      //ADD INTO DATABASE FROM DOWN YONDER
       return allGames;
     })
     .then((gamesData) => {
       //console.log( gamesData);
       Game.bulkCreate(gamesData);
       allGames = gamesData;
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
 }
 
@@ -184,9 +149,6 @@ async function getApi() {
 //let allGames = () =>
 
 getApi();
-// setInterval(retrieveData, 3600000);
-
-//console.log( "test test" + allGames + "test test");
-const test = console.log("this is a");
+setInterval(retrieveData, 3600000);
 
 module.exports = getApi();
