@@ -55,7 +55,7 @@ Game.init(
     game_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
-      //unique: true,
+      unique: true,
       //primarykey: true,
     },
     team_id_home: {

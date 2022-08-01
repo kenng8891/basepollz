@@ -2,7 +2,7 @@ const { response } = require("express");
 const moment = require("moment");
 const fetch = require("node-fetch");
 const Game = require("../../models/Game");
-const gamesData = require("../../seeds/game-data");
+//const gamesData = require("../../seeds/game-data");
 
 var now = moment();
 var priorDate = now.subtract(1, "days").format("YYYY-MM-DD");
@@ -14,36 +14,6 @@ let allGames = [];
 let datesObj = {};
 
 const teamLogos = [
-  // {team_id: 134, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Pittsburgh_Pirates.png"},
-  // {team_id: 112, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Chicago_Cubs.png"},
-  // {team_id: 146, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Miami_Marlins.png"},
-  // {team_id: 113, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Cincinnati_Reds.png"},
-  // {team_id: 139, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/TampaBay_Rays.png"},
-  // {team_id: 110, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Baltimore_Orioles.png"},
-  // {team_id: 144, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Atlanta_Braves.png"},
-  // {team_id: 143, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Philadelphia_Phillies.png"},
-  // {team_id: 138, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/StLouis_Cardinals.png"},
-  // {team_id: 141, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Toronto_Blue_Jays.png"},
-  // {team_id: 114, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Cleveland_Indians.png"},
-  // {team_id: 111, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Boston_Redsox.png"},
-  // {team_id: 135, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/SanDiego_Padres.png"},
-  // {team_id: 116, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Detroit_Tigers.png"},
-  // {team_id: 147, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/NewYork_Yankees.png"},
-  // {team_id: 121, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/NewYork_Mets.png"},
-  // {team_id: 108, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/LosAngeles_Angels.png"},
-  // {team_id: 118, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/KansasCity_Royals.png"},
-  // {team_id: 142, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Minnesota_Twins.png"},
-  // {team_id: 158, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Milwaukee_Brewers.png"},
-  // {team_id: 145, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Chicago_White_Sox.png"},
-  // {team_id: 115, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Colorado_Rockies.png"},
-  // {team_id: 117, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Houston_Astros.png"},
-  // {team_id: 133, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Oakland_Athletics.png"},
-  // {team_id: 137, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/SanFrancisco_Giants.png"},
-  // {team_id: 109, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Arizona_Diamondbacks.png"},
-  // {team_id: 120, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Washington_Nationals.png"},
-  // {team_id: 119, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/LosAngeles_Dodgers.png"},
-  // {team_id: 140, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Texas_Rangers.png"},
-  // {team_id: 136, team_logo: "https://www.capsinfo.com/images/MLB_Team_Logos/Seattle_Mariners.png"}
 
   { team_id: 134, team_logo: "../logo-files/Pittsburgh_Pirates.png" },
   { team_id: 112, team_logo: "../logo-files/Chicago_Cubs.png" },
@@ -134,7 +104,24 @@ async function getApi() {
     })
     .then((gamesData) => {
       //console.log( gamesData);
-      Game.bulkCreate(gamesData, {
+
+      Game.bulkCreate(gamesData, 
+      {
+        fields: "game_id",
+        ignoreDuplicates: true
+      });
+
+    return gamesData
+    })
+    .then((gamesData) => {
+      //console.log( gamesData);
+
+      Game.bulkCreate(gamesData, 
+      [
+        {game_status: "Live"},
+        {game_status: "Preview"}
+      ],  
+      {
         updateOnDuplicate:[
           "game_status",
           "team_isWinner_home",
