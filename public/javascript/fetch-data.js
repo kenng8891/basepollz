@@ -138,6 +138,7 @@ async function getApi() {
       return uniqueGames;
     })
     .then((gamesData) => {
+
       Game.bulkCreate(gamesData, {
         updateOnDuplicate:[
           "game_status",
@@ -155,11 +156,18 @@ async function getApi() {
     });
 }
 
+//took this off so i wouldn't do so many pulls,
+//but we need it to run right when the server starts
 
-function retrieveData() {
-  getApi();
-  setInterval(getApi, 3600000);
-}
+//let allGames = () =>
+//changes made: added let allGames=[] into getApi function and commented it out globally - reduced refresh time by 1/10 therefore it'll refresh every 36 sec instead of hour
 
-module.exports = retrieveData();
+getApi();
+setInterval(getApi, 3600000);
 
+// function retrieveData() {
+//   getApi();
+//   setInterval(getApi, 3600000);
+// }
+
+module.exports = getApi();
