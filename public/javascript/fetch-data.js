@@ -10,7 +10,7 @@ var priorDate = now.subtract(1, "days").format("YYYY-MM-DD");
 var tmwDate = now.add(2, "days").format("YYYY-MM-DD");
 // const reloadTime = 6;
 
-let allGames = [];
+// let allGames = [];
 let datesObj = {};
 
 const teamLogos = [
@@ -86,6 +86,7 @@ const teamLogos = [
 // }
 
 async function getApi() {
+  let allGames = [];
   var mlbApi =
     "http://statsapi.mlb.com/api/v1/schedule/games/?sportId=1&startDate=" +
     priorDate +
@@ -130,10 +131,13 @@ async function getApi() {
           }
         }
       }
-      return allGames;
+      let uniqueGames = allGames.filter((game_id, index) => {
+        return allGames.indexOf(game_id) === index;
+      })
+    
+      return uniqueGames;
     })
     .then((gamesData) => {
-      //console.log( gamesData);
       Game.bulkCreate(gamesData, {
         updateOnDuplicate:[
           "game_status",
@@ -151,12 +155,11 @@ async function getApi() {
     });
 }
 
-//took this off so i wouldn't do so many pulls,
-//but we need it to run right when the server starts
 
-//let allGames = () =>
+function retrieveData() {
+  getApi();
+  setInterval(getApi, 3600000);
+}
 
-getApi();
-setInterval(getApi, 3600000);
+module.exports = retrieveData();
 
-module.exports = getApi();
