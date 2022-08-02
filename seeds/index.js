@@ -9,20 +9,20 @@ const sequelize = require('../config/connection');
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('--------------');
-  // await seedUsers();
+  await seedUsers();
   // console.log('--------------');
 
   //by module.exporting  getApi() in fetch-data.js, it just runs the fetch request when "seedGames" is called here.
   await seedGames;
   console.log('--------------');
 
-  // await seedComments();
+  await seedComments();
   // console.log('--------------');
 
   // await seedVotes();
   // console.log('--------------');
 
-  process.exit(0);
+  // process.exit(0);
 };
 
 seedAll();

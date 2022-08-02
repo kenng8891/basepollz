@@ -131,24 +131,44 @@ async function getApi() {
           }
         }
       }
+      
       let uniqueGames = allGames.filter((game_id, index) => {
         return allGames.indexOf(game_id) === index;
       })
     
       return uniqueGames;
+      // return allGames;
     })
     .then((gamesData) => {
 
+// if the table doesn exist, bulk create
+
       Game.bulkCreate(gamesData, {
-        updateOnDuplicate:[
-          "game_status",
-          "team_isWinner_home",
-          "team_isWinner_away",
-          "team_score_home",
-          "team_score_away"
-        ]
+        ignoreDuplicates: true,
+        // updateOnDuplicate:[
+        //   "game_status",
+        //   "team_isWinner_home",
+        //   "team_isWinner_away",
+        //   "team_score_home",
+        //   "team_score_away"
+        // ]
       });
       
+      Game.update (
+        {
+          game_status: gamesData.game_status,
+          team_score_home: gamesData.team_score_home,
+          team_score_away: gamesData.team_score_away,
+          team_isWinner_home: gamesData.team_isWinner_home,
+          team_isWinner_away: gamesData.team_isWinner_away
+        },
+        {
+          where: {
+            game_status: ['Live', 'Preview']
+          }
+        }
+      )
+
     })
     .catch((err) => {
       console.log(err);
@@ -162,12 +182,13 @@ async function getApi() {
 //let allGames = () =>
 //changes made: added let allGames=[] into getApi function and commented it out globally - reduced refresh time by 1/10 therefore it'll refresh every 36 sec instead of hour
 
-getApi();
-setInterval(getApi, 3600000);
+//getApi();
+setInterval(getApi, 300000);
 
 // function retrieveData() {
 //   getApi();
-//   setInterval(getApi, 3600000);
+//   setInterval(getApi, 36000);
 // }
 
 module.exports = getApi();
+// module.exports = retrieveData();

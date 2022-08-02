@@ -54,8 +54,8 @@ Game.init(
     },
     game_id: {
       type: DataTypes.INTEGER,
-      allowNull: true,
-      //unique: true,
+      allowNull: false,
+      unique: true,
       //primarykey: true,
     },
     team_id_home: {
@@ -117,6 +117,10 @@ Game.init(
   },
   {
     sequelize,
+    // indexes: [{
+    //   unique: true,
+    //   fields: ['game_id']
+    // }],
     freezeTableName: true,
     underscored: true,
     modelName: "game",
