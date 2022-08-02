@@ -22,7 +22,7 @@ const seedAll = async () => {
   // await seedVotes();
   // console.log('--------------');
 
-  process.exit(0);
+  // process.exit(0);
 };
 
 seedAll();
