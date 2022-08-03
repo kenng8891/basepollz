@@ -344,6 +344,7 @@ async function getApi() {
         //   "team_score_away"
         // ]
       });
+      setInterval(getApi, 3600000);
       
     })
     .catch((err) => {
@@ -358,6 +359,6 @@ async function getApi() {
 //let allGames = () =>
 
 getApi();
-setInterval(getApi, 3600000);
+// setInterval(getApi, 3600000);
 
 module.exports = getApi();
